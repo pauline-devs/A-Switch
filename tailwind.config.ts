@@ -12,6 +12,10 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+      display: ["Poppins", "sans-serif"],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -56,6 +60,19 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        dark: {
+          bg: "hsl(var(--dark-bg))",
+          card: "hsl(var(--dark-card))",
+        },
+        light: {
+          bg: "hsl(var(--light-bg))",
+        },
+        accent: {
+          blue: "#5B7FFF",
+          pink: "#E91E8C",
+          yellow: "#F4D400",
+          purple: "#7C3AED",
         },
       },
       borderRadius: {
