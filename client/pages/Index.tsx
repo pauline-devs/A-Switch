@@ -6,11 +6,19 @@ export default function Index() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="font-display font-bold text-xl text-gray-900">Andro-Switch</div>
+          <div className="font-display font-bold text-xl text-gray-900">
+            Andro-Switch
+          </div>
           <div className="flex gap-8">
-            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Accueil</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">À propos</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Contact</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
+              Accueil
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
+              À propos
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
+              Contact
+            </a>
           </div>
         </div>
       </nav>
@@ -20,8 +28,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-              Investissez<br />
-              dans le futur<br />
+              Investissez
+              <br />
+              dans le futur
+              <br />
               de la contraception
             </h1>
             <p className="text-gray-300 text-lg mb-8">
@@ -61,9 +71,7 @@ export default function Index() {
               <h3 className="font-display text-3xl lg:text-4xl font-bold text-blue-600 mb-2">
                 1.2B
               </h3>
-              <p className="text-gray-600 text-sm">
-                Marché potentiel estimé
-              </p>
+              <p className="text-gray-600 text-sm">Marché potentiel estimé</p>
             </div>
 
             <div className="text-center">
@@ -90,7 +98,9 @@ export default function Index() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <h3 className="font-semibold text-gray-900">Technologie brevetée</h3>
+                <h3 className="font-semibold text-gray-900">
+                  Technologie brevetée
+                </h3>
               </div>
               <p className="text-gray-600 text-sm">
                 Solution novatrice protégée par brevets internationaux
@@ -100,7 +110,9 @@ export default function Index() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <h3 className="font-semibold text-gray-900">Études cliniques complètes</h3>
+                <h3 className="font-semibold text-gray-900">
+                  Études cliniques complètes
+                </h3>
               </div>
               <p className="text-gray-600 text-sm">
                 Validation scientifique rigoureuse et transparente
@@ -125,7 +137,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">
-              L'autotest est<br />déjà rentable !
+              L'autotest est
+              <br />
+              déjà rentable !
             </h2>
             <p className="text-gray-400 max-w-2xl">
               Notre solution d'autodiagnostic révolutionne le modèle économique
@@ -137,7 +151,11 @@ export default function Index() {
             {/* Card 1 */}
             <div className="bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl p-8 text-gray-950">
               <h3 className="font-display text-xl font-bold mb-4">
-                LA CONTRACEPTION<br />MASCULINE,<br />ON EN EST OÙ ?
+                LA CONTRACEPTION
+                <br />
+                MASCULINE,
+                <br />
+                ON EN EST OÙ ?
               </h3>
               <p className="text-sm opacity-90">
                 Découvrez l'état actuel des solutions contraceptives pour hommes
@@ -148,7 +166,9 @@ export default function Index() {
             <div className="bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl p-8 text-white flex flex-col justify-between">
               <div>
                 <h3 className="font-display text-xl font-bold mb-4">
-                  Technologie<br />Avancée
+                  Technologie
+                  <br />
+                  Avancée
                 </h3>
                 <p className="text-sm opacity-90">
                   Une solution moderne et efficace pour le contrôle natal
@@ -160,7 +180,9 @@ export default function Index() {
             {/* Card 3 */}
             <div className="bg-gradient-to-br from-orange-300 to-orange-500 rounded-2xl p-8 text-gray-950">
               <h3 className="font-display text-xl font-bold mb-4">
-                RESPONSABILITÉ<br />PARTAGÉE
+                RESPONSABILITÉ
+                <br />
+                PARTAGÉE
               </h3>
               <p className="text-sm opacity-90">
                 Vers une égalité dans la charge contraceptive
@@ -182,7 +204,13 @@ export default function Index() {
             <div className="bg-yellow-300 rounded-2xl p-8 text-gray-950 flex items-center">
               <div>
                 <h3 className="font-display text-lg font-bold mb-2">
-                  J'ai décidé de<br />prendre le relais.<br />Cette responsabilité<br />ma semblait évident.
+                  J'ai décidé de
+                  <br />
+                  prendre le relais.
+                  <br />
+                  Cette responsabilité
+                  <br />
+                  ma semblait évident.
                 </h3>
                 <p className="text-xs opacity-75">Témoignage utilisateur</p>
               </div>
@@ -191,7 +219,11 @@ export default function Index() {
             {/* Card 6 - Testimonial */}
             <div className="bg-purple-600 rounded-2xl p-8 text-white">
               <h3 className="font-display text-lg font-bold mb-4">
-                LA CONTRACEPTION<br />MASCULINE,<br />ON EN EST OÙ ?
+                LA CONTRACEPTION
+                <br />
+                MASCULINE,
+                <br />
+                ON EN EST OÙ ?
               </h3>
               <div className="space-y-2 text-sm">
                 <p>✓ Acceptabilité élevée</p>
@@ -210,27 +242,35 @@ export default function Index() {
             Vision long-terme:
           </h2>
           <p className="text-gray-600 mb-12 max-w-3xl">
-            Ouvrir Andro-Switch aux marchés de l'Europe,<br />
+            Ouvrir Andro-Switch aux marchés de l'Europe,
+            <br />
             des USA, du Canada.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="font-semibold text-gray-900 mb-3">Phase 1: Europe</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">
+                Phase 1: Europe
+              </h3>
               <p className="text-gray-600 text-sm">
-                Lancement initial sur les marchés européens avec partenaires locaux
+                Lancement initial sur les marchés européens avec partenaires
+                locaux
               </p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="font-semibold text-gray-900 mb-3">Phase 2: Amérique du Nord</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">
+                Phase 2: Amérique du Nord
+              </h3>
               <p className="text-gray-600 text-sm">
                 Expansion vers les États-Unis et le Canada
               </p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="font-semibold text-gray-900 mb-3">Phase 3: Global</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">
+                Phase 3: Global
+              </h3>
               <p className="text-gray-600 text-sm">
                 Présence mondiale et impact de santé publique majeur
               </p>
@@ -240,21 +280,27 @@ export default function Index() {
           {/* FAQ-style boxes */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="border border-gray-200 rounded-lg p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Quels sont les obstacles ?</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">
+                Quels sont les obstacles ?
+              </h4>
               <p className="text-gray-600 text-sm">
                 Régulation, acceptabilité sociale, et accès aux marchés
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Comment les surmonter ?</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">
+                Comment les surmonter ?
+              </h4>
               <p className="text-gray-600 text-sm">
                 Études cliniques robustes et partenariats stratégiques
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Quel impact ?</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">
+                Quel impact ?
+              </h4>
               <p className="text-gray-600 text-sm">
                 Révolutionner l'accès à la contraception masculine sûre
               </p>
@@ -291,11 +337,16 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-4xl font-bold text-gray-900 mb-4">
-                Collaborons<br />au futur<br />ensemble.
+                Collaborons
+                <br />
+                au futur
+                <br />
+                ensemble.
               </h2>
               <p className="text-gray-600 mb-8">
                 Nous recherchons des partenaires visionnaires pour accélérer
-                l'adoption de solutions contraceptives innovantes et accessibles.
+                l'adoption de solutions contraceptives innovantes et
+                accessibles.
               </p>
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg flex items-center gap-2 transition-colors">
                 Nous rejoindre
@@ -331,7 +382,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-display font-bold text-white mb-4">Andro-Switch</h3>
+              <h3 className="font-display font-bold text-white mb-4">
+                Andro-Switch
+              </h3>
               <p className="text-sm">
                 Révolutionner la contraception masculine pour un avenir meilleur
               </p>
@@ -339,25 +392,61 @@ export default function Index() {
             <div>
               <h4 className="font-semibold text-white mb-4">Produit</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">À propos</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Technologie</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Études</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    À propos
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Technologie
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Études
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-white mb-4">Entreprise</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Carrières</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Carrières
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-white mb-4">Légal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Confidentialité</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">CGU</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Mentions légales</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Confidentialité
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    CGU
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Mentions légales
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -367,9 +456,15 @@ export default function Index() {
               © 2024 Andro-Switch. Tous droits réservés.
             </p>
             <div className="flex gap-4 mt-4 sm:mt-0">
-              <a href="#" className="hover:text-white transition-colors">Twitter</a>
-              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-              <a href="#" className="hover:text-white transition-colors">Facebook</a>
+              <a href="#" className="hover:text-white transition-colors">
+                Twitter
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                LinkedIn
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Facebook
+              </a>
             </div>
           </div>
         </div>
