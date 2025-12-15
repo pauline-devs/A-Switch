@@ -1,7 +1,7 @@
-import { ArrowRight, MoreVertical } from "lucide-react";
+import { ArrowRight, MoreVertical, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -315,8 +315,15 @@ const InvestorTool = () => {
 
 
 export default function Index() {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCarouselHovered, setIsCarouselHovered] = useState(false);
+
+  const handleLogout = () => {
+    localStorage.removeItem("andro-switch-authenticated");
+    navigate("/password");
+  };
+
 
   const navigationLinks = [
     { label: "Accueil", href: "#hero" },
@@ -337,6 +344,17 @@ export default function Index() {
 
   return (
     <div className="w-full">
+      {/* Back Button */}
+      <motion.button
+        onClick={handleLogout}
+        className="hidden lg:block fixed lg:top-3 left-3 z-[60] p-1.5 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-900 transition-colors"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        title="Back"
+      >
+        <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+      </motion.button>
+
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
