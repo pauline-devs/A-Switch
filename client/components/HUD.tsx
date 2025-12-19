@@ -708,8 +708,8 @@ export default function HUD() {
         cardId="card-1"
         position="top-left"
         delay={0.1}
-        title="Product"
-        description="Who is it?"
+        title="Andro-Switch"
+        description="Name story"
         isSelected={selectedCardId === "card-1"}
         onSelect={() =>
           setSelectedCardId(selectedCardId === "card-1" ? null : "card-1")

@@ -829,7 +829,7 @@ export default function Index() {
         </div>
       </section>
 
-{false && (
+    {/* {false && ( */}
       <section id="roadmap" className="py-20 bg-gradient-to-br from-gray-900 to-gray-950 text-white rounded-tl-[60px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Roadmap & Investor Impact Section */}
@@ -845,9 +845,9 @@ export default function Index() {
               className="font-display text-5xl sm:text-6xl font-bold mb-16 text-center"
               variants={itemVariants}
             >
-              <TextReveal>Your AI Partner for Smarter</TextReveal>
+              <TextReveal>Roadmap stratégique</TextReveal>
               <br />
-              <TextReveal>Faster Solutions</TextReveal>
+              <TextReveal>Andro-Switch</TextReveal>
             </motion.h2>
 
             {/* Two Column Layout */}
@@ -869,13 +869,13 @@ export default function Index() {
                     className="font-display text-2xl sm:text-3xl font-bold mb-4"
                     variants={itemVariants}
                   >
-                    Workflow With Custom AI Tools
+                    Notre vision
                   </motion.h3>
                   <motion.p
                     className="text-gray-400 text-sm leading-relaxed mb-6"
                     variants={itemVariants}
                   >
-                    Our cutting-edge AI solutions empower healthcare professionals and organizations to streamline workflows, enhance decision-making, and drive innovation across reproductive health technologies and patient care management.
+                    Notre vision: Une démarche pensée sur le long-terme: voilà ce qu’on a fait, voilà où on va, et c’est ça pour nous tous!
                   </motion.p>
                 </div>
 
@@ -955,19 +955,31 @@ export default function Index() {
                   {[
                     {
                       icon: "●",
-                      title: "Vision AI Technology",
+                      title: "2018 - Recherche et développement",
                       description: "Our Technology AI Generator enables advanced analysis and intelligence generation.",
                       color: "purple"
                     },
                     {
                       icon: "●",
-                      title: "AI For Everyone",
+                      title: "2020 - Brevet international",
                       description: "Our Technology AI Generator website empowers individuals and organizations.",
                       color: "blue"
                     },
                     {
                       icon: "●",
-                      title: "Integrated Solutions",
+                      title: "2022 - Tests cliniques phase 1",
+                      description: "AI-powered tools for healthcare professionals and medical training.",
+                      color: "purple"
+                    },
+                    {
+                      icon: "●",
+                      title: "2027 - Certification CE",
+                      description: "AI-powered tools for healthcare professionals and medical training.",
+                      color: "purple"
+                    },
+                    {
+                      icon: "●",
+                      title: "2028 - Expansion mondiale",
                       description: "AI-powered tools for healthcare professionals and medical training.",
                       color: "purple"
                     }
@@ -1170,7 +1182,7 @@ export default function Index() {
           </motion.div>
         </div>
       </section>
-)}
+{/* )} */}
 
       {/* Trust Section */}
       <section id="trust" className="py-20 bg-gray-950 text-white rounded-br-[60px]">
