@@ -87,7 +87,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              THOREME-CORE
+              THOREME-INVEST
             </motion.span>
 
             {/* Main Title */}
@@ -185,7 +185,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
                 textShadow: "0 0 20px rgba(221, 231, 248, 0.8), 0 0 40px rgba(164, 164, 164, 0.76)"
               }}
             >
-              Accès réservé aux initiés
+              Premium Access Invest
             </motion.p>
           </motion.div>
         </div>
