@@ -444,7 +444,9 @@ export default function Index() {
               className="text-gray-300 text-lg mb-8"
               variants={itemVariants}
             >
-              Découvrez l'innovation révolutionnaire qui change la donne
+              Andro-Switch : Premier dispositif médical 
+              <br/>
+              de contraception thermique masculine au monde.
             </motion.p>
             <motion.button
               className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg flex items-center gap-2 transition-colors"
@@ -530,7 +532,7 @@ export default function Index() {
                 70%
               </motion.h3>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Acceptabilité chez les femmes
+                des français prêt à investir dans la solution Andro Switch.
               </motion.p>
             </motion.div>
           </motion.div>
@@ -585,7 +587,7 @@ export default function Index() {
                 <motion.h3
                   className="font-semibold text-gray-900"
                   variants={itemVariants}
-                ><TextReveal>Impact sociétal</TextReveal></motion.h3>
+                ><TextReveal>Impact global</TextReveal></motion.h3>
               </div>
               <motion.p
                 className="text-gray-600 text-sm"
@@ -612,9 +614,9 @@ export default function Index() {
               className="font-display text-4xl sm:text-5xl font-bold mb-4"
               variants={itemVariants}
             >
-              <TextReveal>L'autotest est</TextReveal>
+              <TextReveal>Andro-Switch est</TextReveal>
               <br />
-              <TextReveal>déjà rentable !</TextReveal>
+              <TextReveal>calibré pour le marché </TextReveal>
             </motion.h2>
             <motion.p
               className="text-gray-400 max-w-2xl"
@@ -622,6 +624,7 @@ export default function Index() {
             >
               Notre solution d'autodiagnostic révolutionne le modèle économique
               de la contraception en le rendant immédiatement viable.
+              L'autotest et accessoires indispensable pour utiliser l’anneau, sont déjà disponible en pharmacie.
             </motion.p>
           </motion.div>
 
@@ -646,7 +649,7 @@ export default function Index() {
               {
                 id: "card2",
                 title: "TECHNOLOGIE AVANCÉE",
-                subtitle: "Une solution moderne et efficace",
+                subtitle: "Un produit eco-responsable et éthique, qui s’inscrit dans un parcours slow-low tech et une approche circuit-court.",
                 detail: "Découvrez notre technologie révolutionnaire qui combine efficacité, sécurité et accessibilité pour le contrôle naturel de la fertilité.",
                 imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop",
                 bgGradient: "bg-gradient-to-br from-purple-500 to-purple-700",
@@ -656,7 +659,7 @@ export default function Index() {
               {
                 id: "card3",
                 title: "RESPONSABILITÉ PARTAGÉE",
-                subtitle: "Vers une égalité dans la charge",
+                subtitle: "Vers une égalité de la charge contraceptive.",
                 detail: "Comprendre comment la contraception masculine redéfinit l'équilibre des responsabilités reproductives dans les couples modernes.",
                 imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
                 bgGradient: "bg-gradient-to-br from-orange-300 to-orange-500",
@@ -666,7 +669,7 @@ export default function Index() {
               {
                 id: "card4",
                 title: "ESSAIS CLINIQUES",
-                subtitle: "Résultats prometteurs et sécurité",
+                subtitle: "Résultats prometteurs en cours de certification.",
                 detail: "Découvrez les résultats de nos essais cliniques rigoureux qui démontrent l'efficacité et la sécurité de notre solution.",
                 imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5f3f2bbbb?w=500&h=300&fit=crop",
                 bgGradient: "bg-gray-800",
@@ -675,7 +678,7 @@ export default function Index() {
               },
               {
                 id: "card5",
-                title: "TÉMOIGNAGES",
+                title: "TÉMOIGNAGES ET COMMUNAUTÉ ACTIVE",
                 subtitle: "Histoires inspirantes d'utilisateurs",
                 detail: "Découvrez les témoignages authentiques de ceux qui ont choisi de prendre responsabilité de leur contraception.",
                 imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop",
@@ -685,8 +688,8 @@ export default function Index() {
               },
               {
                 id: "card6",
-                title: "IMPACT SOCIÉTAL",
-                subtitle: "Vers une révolution contraceptive",
+                title: "APPEL À L'AVANCÉE MÉDICALE",
+                subtitle: "Vers une révolution contraceptive et économique: l'urgence de l'action collective.",
                 detail: "Explorez comment l'innovation en contraception masculine peut transformer la santé reproductive et l'égalité des genres.",
                 imageUrl: "https://images.unsplash.com/photo-1543269865-cbdf26cecb46?w=500&h=300&fit=crop",
                 bgGradient: "bg-purple-600",
