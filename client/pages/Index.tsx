@@ -647,7 +647,7 @@ export default function Index() {
                 title: t("cardsSection.card2Title"),
                 subtitle: t("cardsSection.card2Subtitle"),
                 detail: t("cardsSection.card2Detail"),
-                imageUrl: "/thoreme-2.jpg",
+                imageUrl: "/thoreme-ethical.png",
                 bgGradient: "bg-gradient-to-br from-purple-500 to-purple-700",
                 textColor: "text-white",
                 articleUrl: "/articles/technologie",
@@ -876,11 +876,20 @@ export default function Index() {
 
                 {/* Large Box - Visual Element */}
                 <motion.div
-                  className="w-full aspect-square bg-gradient-to-br from-gray-300 to-gray-400 rounded-3xl"
+                  className="w-full aspect-square rounded-3xl overflow-hidden"
                   variants={itemVariants}
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                />
+                >
+                  <img
+                    src="/roadmap-1.webp"
+                    alt="Roadmap Visual"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </motion.div>
+                                
 
                 {/* Stats */}
                 <motion.div
@@ -943,7 +952,15 @@ export default function Index() {
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 rounded-3xl"
                   variants={itemVariants}
-                />
+                >
+                   {/* <img
+                    src="/roadmap-2.png"
+                    alt="Roadmap Visual background"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  /> */}
+                </motion.div>
 
                 {/* Overlaid Feature Cards */}
                 <div className="absolute inset-0 flex flex-col justify-center gap-4 p-6 lg:p-8">
@@ -1103,12 +1120,6 @@ export default function Index() {
                         }
                       }
                     }}
-                    whileHover={{
-                      y: phase.highlight ? -8 : 0,
-                      boxShadow: phase.highlight
-                        ? "0 20px 40px rgba(59, 130, 246, 0.3)"
-                        : "0 10px 20px rgba(255, 255, 255, 0.05)"
-                    }}
                   >
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"
@@ -1213,38 +1224,38 @@ export default function Index() {
               {[
                 {
                   name: "Santé Publique France",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sante-publique-France-logo.svg/1024px-Sante-publique-France-logo.svg.png"
+                  logo: "/logo-4-Sante-publique-France-logo.svg"
                 },
                 {
                   name: "Collège Médecine Générale",
-                  logo: "https://www.cmg.fr/wp-content/uploads/2023/10/Logo-CMG-2023.png"
+                  logo: "/logo-5-cmg.png"
                 },
                 {
                   name: "AFU",
-                  logo: "https://www.urofrance.org/wp-content/uploads/2023/01/logo-afu.png"
+                  logo: "/logo-6-afu.png"
                 },
                 {
                   name: "Le Monde",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Le_Monde_logo.svg/1024px-Le_Monde_logo.svg.png"
+                  logo: "/logo-1-lemonde.png"
                 },
                 {
                   name: "Arte",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/ARTE_logo_2020.svg/1024px-ARTE_logo_2020.svg.png"
+                  logo: "/logo-2-arte.webp"
                 },
                 {
                   name: "Libération",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lib%C3%A9ration_logo.svg/1024px-Lib%C3%A9ration_logo.svg.png"
+                  logo: "/logo-3-liberation.png"
                 }
               ].map((partner, idx) => (
                 <motion.div
                   key={idx}
-                  className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
+                  className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-white overflow-hidden rounded-xl hover:bg-white/20 transition-colors"
                   whileHover={{ scale: 1.05 }}
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-w-[90%] max-h-[90%] object-contain"
+                    className="object-contain"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = 'none';
                       const parent = (e.target as HTMLImageElement).parentElement;
@@ -1256,40 +1267,40 @@ export default function Index() {
                 </motion.div>
               ))}
               {[
-                {
+                 {
                   name: "Santé Publique France",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sante-publique-France-logo.svg/1024px-Sante-publique-France-logo.svg.png"
+                  logo: "/logo-4-Sante-publique-France-logo.svg"
                 },
                 {
                   name: "Collège Médecine Générale",
-                  logo: "https://www.cmg.fr/wp-content/uploads/2023/10/Logo-CMG-2023.png"
+                  logo: "/logo-5-cmg.png"
                 },
                 {
                   name: "AFU",
-                  logo: "https://www.urofrance.org/wp-content/uploads/2023/01/logo-afu.png"
+                  logo: "/logo-6-afu.png"
                 },
                 {
                   name: "Le Monde",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Le_Monde_logo.svg/1024px-Le_Monde_logo.svg.png"
+                  logo: "/logo-1-lemonde.png"
                 },
                 {
                   name: "Arte",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/ARTE_logo_2020.svg/1024px-ARTE_logo_2020.svg.png"
+                  logo: "/logo-2-arte.webp"
                 },
                 {
                   name: "Libération",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lib%C3%A9ration_logo.svg/1024px-Lib%C3%A9ration_logo.svg.png"
+                  logo: "/logo-3-liberation.png"
                 }
               ].map((partner, idx) => (
                 <motion.div
                   key={`duplicate-${idx}`}
-                  className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
+                  className="flex-shrink-0 w-48 h-24 flex items-center justify-center  bg-white overflow-hidden  rounded-xl hover:bg-white/20 transition-colors"
                   whileHover={{ scale: 1.05 }}
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-w-[90%] max-h-[90%] object-contain"
+                    className="object-contain"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = 'none';
                       const parent = (e.target as HTMLImageElement).parentElement;
@@ -1418,11 +1429,6 @@ export default function Index() {
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
                     {t("footerSection.companyBlog")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    {t("footerSection.companyCareers")}
                   </a>
                 </li>
                 <li>

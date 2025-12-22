@@ -178,9 +178,8 @@
     "productAbout": "À propos",
     "productTechnology": "Technologie",
     "productStudies": "Études",
-    "companyTitle": "Entreprise",
-    "companyBlog": "Blog",
-    "companyCareers": "Carrières",
+    "companyTitle": "Thoreme",
+    "companyBlog":"Thoreme.com",
     "companyContact": "Contact",
     "legalTitle": "Légal",
     "legalPrivacy": "Confidentialité",
@@ -204,12 +203,12 @@
     "card2": {
       "title": "TECHNOLOGIE AVANCÉE",
       "subtitle": "Un produit eco-responsable et éthique, qui s'inscrit dans un parcours slow-low tech et une approche circuit-court.",
-      "detail": "Découvrez notre technologie révolutionnaire qui combine efficacité, sécurité et accessibilité pour le contrôle naturel de la fertilité."
+      "detail": "Découvrez notre technologie révolutionnaire qui combine efficacité et conscience éthique, de la conception à la commercialisation."
     },
     "card3": {
       "title": "RESPONSABILITÉ PARTAGÉE",
       "subtitle": "Vers une égalité dans la charge contraceptive.",
-      "detail": "Comprenez comment la contraception masculine redéfinit l'équilibre des responsabilités reproductives dans les couples modernes."
+      "detail": "Comprenez comment la contraception masculine redéfinit l'équilibre des responsabilités reproductives dans les couples modernes et à grande échelle."
     },
     "card4": {
       "title": "ESSAIS CLINIQUES",
@@ -224,7 +223,7 @@
     "card6": {
       "title": "APPEL À L'AVANCEMENT MÉDICAL",
       "subtitle": "Vers une révolution contraceptive et économique : l'urgence de l'action collective.",
-      "detail": "Explorez comment l'innovation en contraception masculine peut transformer la santé reproductive et l'égalité des genres."
+      "detail": "Explorez comment l'innovation en contraception masculine peut transformer la santé reproductive et redessiner l'économie médicale."
     }
   },
   "vision": {
@@ -301,7 +300,9 @@
     "projections": "projections",
     "marketPotential": "Potentiel de marché",
     "generation": "génération",
-    "impactMessage": "Votre investissement de {amount} € crée un impact direct de {impact} bénéficiaires et acteurs du changement."
+    "impactMessagePrefix": "Votre investissement de",
+    "impactMessageMiddle": "€ crée un impact direct de",
+    "impactMessageSuffix": "bénéfices et changements majeurs."
   },
   "trust": {
     "subtitle": "Nos partenaires",
@@ -319,7 +320,7 @@
     "benefit3": "Impact sociétal positif"
   },
   "footer": {
-    "tagline": "Révolutionner la contraception masculine pour un meilleur avenir",
+    "tagline": "Révolutionner la contraception masculine.",
     "productTitle": "Produit",
     "about": "À propos",
     "technology": "Technologie",
