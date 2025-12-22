@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useNavigate } from "react-router-dom";
 import TorusScene from "@/components/TorusScene";
 import HUD from "@/components/HUD";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 interface GateProps {
   onUnlock: () => void;
@@ -12,6 +14,7 @@ interface GateProps {
 }
 
 export default function Gate({ onUnlock, onLogout }: GateProps) {
+  const { t } = useTranslation();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -45,6 +48,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900 flex items-center justify-center overflow-hidden relative font-display">
+
       {/* 3D Torus - Wireframe, Circling Title */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
         <Suspense fallback={<div className="w-full h-full bg-black" />}>
@@ -55,6 +59,11 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
 
         {/* HUD Elements - Smart positioning around torus */}
         <HUD />
+      </div>
+
+         {/* Language Switcher - Top Right */}
+      <div className="absolute top-6 right-6 z-20">
+        <LanguageSwitcher />
       </div>
 
       {/* Content Overlay - Centered Content */}
@@ -75,7 +84,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              THOREME-INVEST
+               {t("gate.thorem")}
             </motion.span>
 
             {/* Main Title */}
@@ -85,7 +94,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Andro-Switch
+               {t("gate.title")}
             </motion.h1>
           </div>
 
@@ -97,9 +106,9 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <p className="text-xs text-gray-400 font-light">
-              First male thermal contraception medical device
+              {t("gate.description1")}
               <br />
-              Join the revolution!
+             {t("gate.description2")}
             </p>
           </motion.div>
 
@@ -118,7 +127,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
                 <input
                   ref={inputRef}
                   type="password"
-                  placeholder="Password"
+                  placeholder={t("gate.inputPlaceholder")}
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -147,7 +156,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
                 whileTap={{ scale: 0.95 }}
                 className="w-full px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold rounded-full font-display transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
-                {isLoading ? "Checking..." : "ENTER THE FUTUR"}
+                {isLoading ? t("gate.verifying") : t("gate.submitButton")}
               </motion.button>
             </motion.form>
 
@@ -173,7 +182,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
                 textShadow: "0 0 20px rgba(221, 231, 248, 0.8), 0 0 40px rgba(164, 164, 164, 0.76)"
               }}
             >
-              Premium Access Invest
+              {t("gate.accessNote")}
             </motion.p>
           </motion.div>
         </div>

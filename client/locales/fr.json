@@ -35,9 +35,9 @@
     }
   },
   "autotest": {
-    "title1": "Andro-Switch est",
-    "title2": "conçu pour s'adapter au marché",
-    "description": "Text à trouver"
+    "title1": "Andro-Switch est pensé",
+    "title2": "pour s'adapter au marché",
+    "description": "Texte à trouver"
   },
   "heroTitle": {
     "line1": "Investissez",
@@ -114,6 +114,7 @@
     "statsFullDesc": "De nos initiatives actuelles à la disponibilité mondiale, notre feuille de route 2024-2030+ assure des solutions IA intégrées, la validation clinique, l'expansion du marché et l'accessibilité mondiale.",
     "readMore": "Lire la suite",
     "learnMore": "En savoir plus",
+    "strategicphases":"4 phases stratégiques",
     "phase1Year": "2024-2025",
     "phase1Title": "Phase actuelle",
     "phase1Desc": "Campagne de sensibilisation mondiale • Développement d'outils IA",
@@ -245,7 +246,7 @@
     }
   },
   "roadmap": {
-    "title": "Feuille de route stratégique",
+    "title": "Roadmap stratégique",
     "subtitle": "Andro-Switch",
     "vision": "Notre vision",
     "visionDesc": "Vision à long terme : voici ce que nous avons fait, voici où nous allons, et ceci est pour tous !",
@@ -354,5 +355,70 @@
   "verifying": "Vérification...",
   "accessNote": "Accès réservé aux initiés",
   "errorIncorrect": "Code d'accès incorrect"
-}
+},
+"hud": {
+    "card1": {
+      "title": "Produit",
+      "description": "Storytelling",
+      "biomimicry": "Biomimétisme",
+      "inspiredBy": "Inspiré par la nature",
+      "thor": "Thor - Tore 3D",
+      "goldenRatio": "Nombre d'or",
+      "fullDescription": "Une approche révolutionnaire de la contraception inspirée par les principes thermiques naturels et la symétrie parfaite du nombre d'or."
+    },
+    "card2": {
+      "title": "Technologie",
+      "description": "Comment ça marche ?",
+      "cleanTech": "Technologie propre",
+      "thermalContraception": "Contraception thermique",
+      "reversible": "Réversible et non-invasive",
+      "fullDescription": "Technologie thermique avancée qui fonctionne avec les processus naturels du corps, complètement réversible et non-invasive."
+    },
+    "card3": {
+      "title": "Société",
+      "description": "Alignement stratégique",
+      "france2030": "France 2030",
+      "funding": "€400M pour l'innovation",
+      "globalPartners": "FP2030, UNFPA, OMS",
+      "fullDescription": "S'aligne avec les priorités stratégiques de France 2030 pour les dispositifs médicaux innovants et les engagements mondiaux des ODD."
+    },
+    "card4": {
+      "title": "Marché",
+      "description": "Répond à un besoin d'Équité contraceptive",
+      "womensEquity": "Équité pour les femmes",
+      "seekingInnovation": "Répond au besoin d'innover",
+      "mensInterest": "Intérêt des hommes",
+      "fullDescription": "Répondre à la demande critique d'équité contraceptive parmi les femmes tout en attirant l'intérêt des investisseurs masculins."
+    },
+    "metrics": {
+      "card1": [
+        { "label": "Concept", "value": "Biomimétisme" },
+        { "label": "Inspiration", "value": "Thor - Tore 3D" },
+        { "label": "Symétrie", "value": "Nombre d'or" },
+        { "label": "Innovation", "value": "Thermique" },
+        { "label": "Design", "value": "Inspiré par la nature" }
+      ],
+      "card2": [
+        { "label": "Type", "value": "Technologie propre" },
+        { "label": "Méthode", "value": "Thermique" },
+        { "label": "Réversibilité", "value": "100%" },
+        { "label": "Invasivité", "value": "Non-invasive" },
+        { "label": "Environnement", "value": "Écologique" }
+      ],
+      "card3": [
+        { "label": "Gouvernement", "value": "France 2030" },
+        { "label": "Allocation", "value": "€400M" },
+        { "label": "Focus", "value": "Innovation médicale" },
+        { "label": "Global", "value": "FP2030, UNFPA, OMS" },
+        { "label": "ODD", "value": "Accès universel" }
+      ],
+      "card4": [
+        { "label": "Femmes", "value": "Forte demande" },
+        { "label": "Équité", "value": "Accessible" },
+        { "label": "Intérêt des hommes", "value": "Croissant" },
+        { "label": "Lacune du marché", "value": "Important" },
+        { "label": "Revenus", "value": "Substantiel" }
+      ]
+    }
+  }
 }

@@ -90,14 +90,14 @@ const HoverCard = ({ card }: { card: CardData }) => {
           >
             <TextReveal>{card.title}</TextReveal>
           </motion.h3>
-          <motion.p className="text-sm opacity-90 mb-4" variants={itemVariants}>
+          <motion.p className="text-sm opacity-90 mb-2" variants={itemVariants}>
             <TextReveal>{card.subtitle}</TextReveal>
           </motion.p>
         </div>
 
         <motion.a
           href={card.articleUrl}
-          className="inline-flex items-center gap-2 font-semibold px-3 py-1 rounded-lg bg-white/20 hover:bg-white/30 text-xs transition-all duration-200 w-fit"
+          className="inline-flex items-center gap-1 font-semibold px-3 py-1 rounded-lg bg-white/20 hover:bg-white/30 text-xs transition-all duration-200 w-fit"
         >
           <span>En savoir plus</span>
           <motion.div
@@ -354,7 +354,7 @@ export default function Index() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex items-center gap-8">
             {navigationLinks.map((link) => (
               <a
                 key={link.label}
@@ -365,6 +365,11 @@ export default function Index() {
                 {link.label}
               </a>
             ))}
+
+            {/* Vertical Separator */}
+            <div className="w-px h-6 bg-gray-300" />
+
+            {/* Language Switcher */}
             <LanguageSwitcher />
           </div>
 
@@ -378,7 +383,7 @@ export default function Index() {
           </button>
         </div>
 
-        {/* Mobile Navigation Menu */}
+         {/* Mobile Navigation Menu */}
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{
@@ -386,7 +391,7 @@ export default function Index() {
             height: isMobileMenuOpen ? "auto" : 0
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden border-t border-gray-200"
+          className="md:hidden overflow-hidden border-t border-gray-200"
         >
           <div className="px-4 py-4 space-y-3 bg-white">
             {navigationLinks.map((link, idx) => (
@@ -408,7 +413,9 @@ export default function Index() {
                 {link.label}
               </motion.a>
             ))}
-            <LanguageSwitcher />
+            <div className="border-t border-gray-200 pt-3 mt-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </motion.div>
       </nav>
@@ -630,7 +637,7 @@ export default function Index() {
                 title: t("cardsSection.card1Title"),
                 subtitle: t("cardsSection.card1Subtitle"),
                 detail: t("cardsSection.card1Detail"),
-                imageUrl: "https://images.unsplash.com/photo-1576091160550-112173f7f869?w=500&h=300&fit=crop",
+                imageUrl: "/thoreme-1.jpg",
                 bgGradient: "bg-gradient-to-br from-pink-400 to-pink-600",
                 textColor: "text-gray-950",
                 articleUrl: "/articles/contraception-masculine",
@@ -640,7 +647,7 @@ export default function Index() {
                 title: t("cardsSection.card2Title"),
                 subtitle: t("cardsSection.card2Subtitle"),
                 detail: t("cardsSection.card2Detail"),
-                imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop",
+                imageUrl: "/thoreme-2.jpg",
                 bgGradient: "bg-gradient-to-br from-purple-500 to-purple-700",
                 textColor: "text-white",
                 articleUrl: "/articles/technologie",
@@ -650,7 +657,7 @@ export default function Index() {
                 title: t("cardsSection.card3Title"),
                 subtitle: t("cardsSection.card3Subtitle"),
                 detail: t("cardsSection.card3Detail"),
-                imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
+                imageUrl: "/thoreme-3.jpg",
                 bgGradient: "bg-gradient-to-br from-orange-300 to-orange-500",
                 textColor: "text-gray-950",
                 articleUrl: "/articles/responsabilite-partagee",
@@ -660,7 +667,7 @@ export default function Index() {
                 title: t("cardsSection.card4Title"),
                 subtitle: t("cardsSection.card4Subtitle"),
                 detail: t("cardsSection.card4Detail"),
-                imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5f3f2bbbb?w=500&h=300&fit=crop",
+                imageUrl: "/thoreme-4.jpg",
                 bgGradient: "bg-gray-800",
                 textColor: "text-white",
                 articleUrl: "/articles/essais-cliniques",
@@ -670,7 +677,7 @@ export default function Index() {
                 title: t("cardsSection.card5Title"),
                 subtitle: t("cardsSection.card5Subtitle"),
                 detail: t("cardsSection.card5Detail"),
-                imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop",
+                imageUrl: "/thoreme-5.jpg",
                 bgGradient: "bg-yellow-300",
                 textColor: "text-gray-950",
                 articleUrl: "/articles/temoignages",
@@ -680,7 +687,7 @@ export default function Index() {
                 title: t("cardsSection.card6Title"),
                 subtitle: t("cardsSection.card6Subtitle"),
                 detail: t("cardsSection.card6Detail"),
-                imageUrl: "https://images.unsplash.com/photo-1543269865-cbdf26cecb46?w=500&h=300&fit=crop",
+                imageUrl: "/thoreme-6.jpg",
                 bgGradient: "bg-purple-600",
                 textColor: "text-white",
                 articleUrl: "/articles/impact-societal",
@@ -1027,7 +1034,7 @@ export default function Index() {
                 className="font-display text-3xl font-bold mb-8"
                 variants={itemVariants}
               >
-                <TextReveal>Phases stratégiques de la feuille de route</TextReveal>
+                <TextReveal>{t("roadmapSection.strategicphases")}</TextReveal>
               </motion.h3>
 
               <motion.div

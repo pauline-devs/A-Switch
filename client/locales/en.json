@@ -33,8 +33,8 @@
     "desc3": "Enhances women's health and autonomy"
   },
   "autotest": {
-    "title1": "Andro-Switch is",
-    "title2": "thought to fit the market",
+    "title1": "Andro-Switch is thought ",
+    "title2": "to fit the market",
     "description": "Text to find"
   },
   "cardsSection": {
@@ -85,6 +85,7 @@
     "statsFullDesc": "From current initiatives through worldwide availability, our roadmap spans 2024-2030+ delivering integrated AI solutions, clinical validation, market expansion, and global accessibility.",
     "readMore": "Read More",
     "learnMore": "Learn More",
+    "strategicphases":"4 strategic phases",
     "phase1Year": "2024-2025",
     "phase1Title": "Current Phase",
     "phase1Desc": "Global awareness campaign • AI tool development",
@@ -175,5 +176,70 @@
   "verifying": "Verifying...",
   "accessNote": "Access reserved for initiates",
   "errorIncorrect": "Incorrect access code"
-}
+},
+"hud": {
+    "card1": {
+      "title": "Product",
+      "description": "Product Storytelling",
+      "biomimicry": "Biomimicry",
+      "inspiredBy": "Inspired by nature",
+      "thor": "Thor - 3D Torus",
+      "goldenRatio": "Golden Ratio",
+      "fullDescription": "A revolutionary approach to contraception inspired by natural thermal principles and the perfect symmetry of the golden ratio."
+    },
+    "card2": {
+      "title": "Technology",
+      "description": "How does it work?",
+      "cleanTech": "Clean Tech",
+      "thermalContraception": "Thermal contraception",
+      "reversible": "Reversible & Non-invasive",
+      "fullDescription": "Advanced thermal technology that works with the body's natural processes, completely reversible and non-invasive."
+    },
+    "card3": {
+      "title": "Society",
+      "description": "Strategic alignment",
+      "france2030": "France 2030",
+      "funding": "€400M for innovation",
+      "globalPartners": "FP2030, UNFPA, WHO",
+      "fullDescription": "Aligns with France 2030's strategic priorities for innovative medical devices and global SDG commitments."
+    },
+    "card4": {
+      "title": "Market",
+      "description": "Contraceptive equity",
+      "womensEquity": "Women's Equity",
+      "seekingInnovation": "Seeking innovation",
+      "mensInterest": "Men's Interest",
+      "fullDescription": "Meeting critical demand for contraceptive equity among women while attracting male investor interest."
+    },
+    "metrics": {
+      "card1": [
+        { "label": "Concept", "value": "Biomimicry" },
+        { "label": "Inspiration", "value": "Thor - 3D Torus" },
+        { "label": "Symmetry", "value": "Golden Ratio" },
+        { "label": "Innovation", "value": "Thermal" },
+        { "label": "Design", "value": "Nature-Inspired" }
+      ],
+      "card2": [
+        { "label": "Type", "value": "Clean Tech" },
+        { "label": "Method", "value": "Thermal" },
+        { "label": "Reversibility", "value": "100%" },
+        { "label": "Invasiveness", "value": "Non-invasive" },
+        { "label": "Environmental", "value": "Eco-friendly" }
+      ],
+      "card3": [
+        { "label": "Government", "value": "France 2030" },
+        { "label": "Allocation", "value": "€400M" },
+        { "label": "Focus", "value": "Medical Innovation" },
+        { "label": "Global", "value": "FP2030, UNFPA, WHO" },
+        { "label": "SDG", "value": "Universal Access" }
+      ],
+      "card4": [
+        { "label": "Women", "value": "High Demand" },
+        { "label": "Equity", "value": "Accessible" },
+        { "label": "Men's Interest", "value": "Growing" },
+        { "label": "Market Gap", "value": "Significant" },
+        { "label": "Revenue", "value": "Substantial" }
+      ]
+    }
+  }
 }
