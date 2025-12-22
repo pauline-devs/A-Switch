@@ -1,0 +1,358 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "innovation": "Innovation",
+    "roadmap": "Roadmap",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title1": "Investissez",
+    "title2": "dans le futur",
+    "title3": "de la contraception",
+    "description": "Andro-Switch : le premier dispositif médical de contraception thermique masculine au monde.",
+    "button": "Devenir partenaire"
+  },
+  "innovation": {
+    "subtitle": "Innovation Andro-Switch",
+    "title": "Révolutionner la contraception",
+    "stats": {
+      "year": "2027",
+      "yearDesc": "Lancement commercial prévu",
+      "market": "1,2 Md",
+      "marketDesc": "Marché potentiel estimé",
+      "sideEffects": "0",
+      "sideEffectsDesc": "Effets secondaires importants",
+      "willingness": "70 %",
+      "willingnessDesc": "Européens disposés à utiliser la solution Andro-Switch"
+    },
+    "features": {
+      "title1": "Technologie certifiée",
+      "desc1": "Solution innovante protégée par des brevets internationaux",
+      "title2": "Études cliniques complètes",
+      "desc2": "Validation scientifique rigoureuse et transparente",
+      "title3": "Impact mondial",
+      "desc3": "Améliore la santé et l'autonomie des femmes"
+    }
+  },
+  "autotest": {
+    "title1": "Andro-Switch est",
+    "title2": "conçu pour s'adapter au marché",
+    "description": "Text à trouver"
+  },
+  "heroTitle": {
+    "line1": "Investissez",
+    "line2": "dans le futur",
+    "line3": "de la contraception"
+  },
+  "heroDescription": "Andro-Switch : le premier dispositif médical de contraception thermique masculine au monde.",
+  "heroButton": "Devenir partenaire",
+  "innovationSubtitle": "Innovation Andro-Switch",
+  "innovationTitle": "Révolutionner la contraception",
+  "innovationStats": {
+    "year": "2027",
+    "yearDesc": "Lancement commercial prévu",
+    "market": "1,2 Md",
+    "marketDesc": "Marché potentiel estimé",
+    "sideEffects": "0",
+    "sideEffectsDesc": "Effets secondaires importants",
+    "willingness": "70%",
+    "willingnessDesc": "Européens disposés à utiliser la solution Andro-Switch"
+  },
+  "innovationFeatures": {
+    "title1": "Technologie certifiée",
+    "desc1": "Solution innovante protégée par des brevets internationaux",
+    "title2": "Études cliniques complètes",
+    "desc2": "Validation scientifique rigoureuse et transparente",
+    "title3": "Impact mondial",
+    "desc3": "Améliore la santé et l'autonomie des femmes"
+  },
+  "cardsSection": {
+    "card1Title": "LA CONTRACEPTION MASCULINE, ON EN EST OÙ ?",
+    "card1Subtitle": "Découvrez l'état actuel des solutions contraceptives",
+    "card1Detail": "Explorez le paysage actuel de la contraception masculine, ses avancées et les défis à surmonter pour une meilleure accessibilité.",
+    "card2Title": "TECHNOLOGIE AVANCÉE",
+    "card2Subtitle": "Un produit eco-responsable et éthique, qui s'inscrit dans un parcours slow-low tech et une approche circuit-court.",
+    "card2Detail": "Découvrez notre technologie révolutionnaire qui combine efficacité, sécurité et accessibilité pour le contrôle naturel de la fertilité.",
+    "card3Title": "RESPONSABILITÉ PARTAGÉE",
+    "card3Subtitle": "Vers une égalité dans la charge contraceptive.",
+    "card3Detail": "Comprenez comment la contraception masculine redéfinit l'équilibre des responsabilités reproductives dans les couples modernes.",
+    "card4Title": "ESSAIS CLINIQUES",
+    "card4Subtitle": "Résultats prometteurs sous certification.",
+    "card4Detail": "Découvrez les résultats de nos essais cliniques rigoureux démontrant l'efficacité et la sécurité de notre solution.",
+    "card5Title": "TÉMOIGNAGES ET COMMUNAUTÉ ACTIVE",
+    "card5Subtitle": "Histoires inspirantes d'utilisateurs",
+    "card5Detail": "Découvrez les témoignages authentiques de ceux qui ont choisi de prendre responsabilité de leur contraception.",
+    "card6Title": "APPEL À L'AVANCEMENT MÉDICAL",
+    "card6Subtitle": "Vers une révolution contraceptive et économique : l'urgence de l'action collective.",
+    "card6Detail": "Explorez comment l'innovation en contraception masculine peut transformer la santé reproductive et l'égalité des genres.",
+    "learnMore": "En savoir plus"
+  },
+  "visionSection": {
+    "title": "Vision long-terme :",
+    "description": "Ouvrir Andro-Switch aux marchés de l'Europe, des États-Unis et du Canada.",
+    "phase1": "Phase 1 : Europe",
+    "phase1Desc": "Lancement initial sur les marchés européens avec partenaires locaux",
+    "phase2": "Phase 2 : Amérique du Nord",
+    "phase2Desc": "Expansion aux marchés américain et canadien",
+    "phase3": "Phase 3 : Mondial",
+    "phase3Desc": "Présence mondiale avec impact majeur sur la santé publique",
+    "faqTitle1": "Quels sont les obstacles ?",
+    "faqAns1": "Réglementation, acceptabilité sociale et accès au marché",
+    "faqTitle2": "Comment les surmonter ?",
+    "faqAns2": "Études cliniques robustes et partenariats stratégiques",
+    "faqTitle3": "Quel impact ?",
+    "faqAns3": "Révolutionner l'accès à la contraception masculine sûre"
+  },
+  "roadmapSection": {
+    "title": "Roadmap stratégique",
+    "subtitle": "Andro-Switch",
+    "visionTitle": "Notre vision",
+    "visionDesc": "Vision à long terme : voici ce que nous avons fait, voici où nous allons, et ceci est pour tous !",
+    "largeBox": "Boîte visuelle de la feuille de route",
+    "statsCount": "2",
+    "statsDesc": "Outils IA en développement pour les professionnels de santé et les utilisateurs",
+    "statsFullDesc": "De nos initiatives actuelles à la disponibilité mondiale, notre feuille de route 2024-2030+ assure des solutions IA intégrées, la validation clinique, l'expansion du marché et l'accessibilité mondiale.",
+    "readMore": "Lire la suite",
+    "learnMore": "En savoir plus",
+    "phase1Year": "2024-2025",
+    "phase1Title": "Phase actuelle",
+    "phase1Desc": "Campagne de sensibilisation mondiale • Développement d'outils IA",
+    "phase2Year": "2026-2027",
+    "phase2Title": "Expansion clinique",
+    "phase2Desc": "Phase d'essais finaux • Approbations réglementaires",
+    "phase3Year": "2028-2029",
+    "phase3Title": "Préparation du marché",
+    "phase3Desc": "Configuration de la distribution • Formation des professionnels",
+    "phase4Year": "2030+",
+    "phase4Title": "Disponibilité",
+    "phase4Desc": "Produit en pharmacies • Impact ODD réalisé",
+    "timeline1": "2018 - Recherche et développement",
+    "timeline1Desc": "Text à adapter.",
+    "timeline2": "2020 - Brevet international",
+    "timeline2Desc": "Text à adapter.",
+    "timeline3": "2022 - Essais cliniques de phase 1",
+    "timeline3Desc": "Text à adapter.",
+    "timeline4": "2027 - Certification CE",
+    "timeline4Desc": "Text à adapter.",
+    "timeline5": "2028 - Expansion mondiale",
+    "timeline5Desc": "Text à adapter.",
+    "calculatorTitle": "Calculateur d'impact pour les investisseurs",
+    "calculatorDesc": "Visualisez l'impact direct de votre investissement sur la révolution contraceptive"
+  },
+  "investorTool": {
+    "investmentLabel": "Montant d'investissement",
+    "minAmount": "10 K€",
+    "maxAmount": "10 M€",
+    "educatedWomen": "Femmes éduquées",
+    "beneficiaries": "bénéficiaires",
+    "trainedProfessionals": "Professionnels formés",
+    "healthSector": "dans le secteur santé",
+    "accessibleDevices": "Appareils accessibles",
+    "projections": "projections",
+    "marketPotential": "Potentiel de marché",
+    "generation": "génération",
+    "impactMessagePrefix": "Votre investissement de",
+    "impactMessageMiddle": "€ crée un impact direct de",
+    "impactMessageSuffix": "bénéficiaires et acteurs du changement."
+  },
+  "trustSection": {
+    "subtitle": "Nos partenaires",
+    "title": "Ils nous font confiance"
+  },
+  "collaborationSection": {
+    "title": "Collaborons",
+    "subtitle": "sur l'avenir",
+    "subtitle2": "Ensemble.",
+    "description": "Nous recherchons des partenaires visionnaires pour accélérer l'adoption de solutions contraceptives innovantes et accessibles.",
+    "button": "Nous rejoindre",
+    "partnersTitle": "Partenaires et investisseurs",
+    "benefit1": "Accès à une technologie révolutionnaire",
+    "benefit2": "Marché en croissance rapide",
+    "benefit3": "Impact sociétal positif"
+  },
+  "footerSection": {
+    "brandTitle": "Andro-Switch",
+    "tagline": "Révolutionner la contraception masculine pour un meilleur avenir",
+    "productTitle": "Produit",
+    "productAbout": "À propos",
+    "productTechnology": "Technologie",
+    "productStudies": "Études",
+    "companyTitle": "Entreprise",
+    "companyBlog": "Blog",
+    "companyCareers": "Carrières",
+    "companyContact": "Contact",
+    "legalTitle": "Légal",
+    "legalPrivacy": "Confidentialité",
+    "legalTerms": "Conditions d'utilisation",
+    "legalNotice": "Mentions légales",
+    "copyright": "© 2024 Andro-Switch. Tous droits réservés.",
+    "socialTwitter": "Twitter",
+    "socialLinkedin": "LinkedIn",
+    "socialFacebook": "Facebook"
+  },
+  "misc": {
+    "back": "Retour",
+    "toggleMenu": "Basculer le menu mobile"
+  },
+  "cards": {
+    "card1": {
+      "title": "LA CONTRACEPTION MASCULINE, ON EN EST OÙ ?",
+      "subtitle": "Découvrez l'état actuel des solutions contraceptives",
+      "detail": "Explorez le paysage actuel de la contraception masculine, ses avancées et les défis à surmonter pour une meilleure accessibilité."
+    },
+    "card2": {
+      "title": "TECHNOLOGIE AVANCÉE",
+      "subtitle": "Un produit eco-responsable et éthique, qui s'inscrit dans un parcours slow-low tech et une approche circuit-court.",
+      "detail": "Découvrez notre technologie révolutionnaire qui combine efficacité, sécurité et accessibilité pour le contrôle naturel de la fertilité."
+    },
+    "card3": {
+      "title": "RESPONSABILITÉ PARTAGÉE",
+      "subtitle": "Vers une égalité dans la charge contraceptive.",
+      "detail": "Comprenez comment la contraception masculine redéfinit l'équilibre des responsabilités reproductives dans les couples modernes."
+    },
+    "card4": {
+      "title": "ESSAIS CLINIQUES",
+      "subtitle": "Résultats prometteurs sous certification.",
+      "detail": "Découvrez les résultats de nos essais cliniques rigoureux démontrant l'efficacité et la sécurité de notre solution."
+    },
+    "card5": {
+      "title": "TÉMOIGNAGES ET COMMUNAUTÉ ACTIVE",
+      "subtitle": "Histoires inspirantes d'utilisateurs",
+      "detail": "Découvrez les témoignages authentiques de ceux qui ont choisi de prendre responsabilité de leur contraception."
+    },
+    "card6": {
+      "title": "APPEL À L'AVANCEMENT MÉDICAL",
+      "subtitle": "Vers une révolution contraceptive et économique : l'urgence de l'action collective.",
+      "detail": "Explorez comment l'innovation en contraception masculine peut transformer la santé reproductive et l'égalité des genres."
+    }
+  },
+  "vision": {
+    "title": "Vision long-terme :",
+    "description": "Ouvrir Andro-Switch aux marchés de l'Europe, des États-Unis et du Canada.",
+    "phase1": "Phase 1 : Europe",
+    "phase1Description": "Lancement initial sur les marchés européens avec partenaires locaux",
+    "phase2": "Phase 2 : Amérique du Nord",
+    "phase2Description": "Expansion aux marchés américain et canadien",
+    "phase3": "Phase 3 : Mondial",
+    "phase3Description": "Présence mondiale avec impact majeur sur la santé publique",
+    "faq": {
+      "q1": "Quels sont les obstacles ?",
+      "a1": "Réglementation, acceptabilité sociale et accès au marché",
+      "q2": "Comment les surmonter ?",
+      "a2": "Études cliniques robustes et partenariats stratégiques",
+      "q3": "Quel impact ?",
+      "a3": "Révolutionner l'accès à la contraception masculine sûre"
+    }
+  },
+  "roadmap": {
+    "title": "Feuille de route stratégique",
+    "subtitle": "Andro-Switch",
+    "vision": "Notre vision",
+    "visionDesc": "Vision à long terme : voici ce que nous avons fait, voici où nous allons, et ceci est pour tous !",
+    "stats": "2 outils IA en développement pour les professionnels de santé et les utilisateurs",
+    "statsDesc": "De nos initiatives actuelles à la disponibilité mondiale, notre feuille de route 2024-2030+ assure des solutions IA intégrées, la validation clinique, l'expansion du marché et l'accessibilité mondiale.",
+    "readMore": "Lire plus",
+    "learnMore": "En savoir plus",
+    "phases": {
+      "phase1": {
+        "year": "2024-2025",
+        "title": "Phase actuelle",
+        "description": "Campagne de sensibilisation mondiale • Développement d'outils IA"
+      },
+      "phase2": {
+        "year": "2026-2027",
+        "title": "Expansion clinique",
+        "description": "Phase d'essais finaux • Approbations réglementaires"
+      },
+      "phase3": {
+        "year": "2028-2029",
+        "title": "Préparation du marché",
+        "description": "Configuration de la distribution • Formation des professionnels"
+      },
+      "phase4": {
+        "year": "2030+",
+        "title": "Disponibilité",
+        "description": "Produit en pharmacies • Impact ODD réalisé"
+      }
+    },
+    "timeline": {
+      "item1": "2018 - Recherche et développement",
+      "item1Desc": "Text à adapter.",
+      "item2": "2020 - Brevet international",
+      "item2Desc": "Text à adapter.",
+      "item3": "2022 - Essais cliniques de phase 1",
+      "item3Desc": "Text à adapter.",
+      "item4": "2027 - Certification CE",
+      "item4Desc": "Text à adapter.",
+      "item5": "2028 - Expansion mondiale",
+      "item5Desc": "Text à adapter."
+    },
+    "impactCalculator": "Calculateur d'impact pour les investisseurs",
+    "impactDescription": "Visualisez l'impact direct de votre investissement sur la révolution contraceptive"
+  },
+  "investorTool": {
+    "investmentLabel": "Montant d'investissement",
+    "educatedWomen": "Femmes éduquées",
+    "beneficiaries": "bénéficiaires",
+    "trainedProfessionals": "Professionnels formés",
+    "healthSector": "dans le secteur santé",
+    "accessibleDevices": "Appareils accessibles",
+    "projections": "projections",
+    "marketPotential": "Potentiel de marché",
+    "generation": "génération",
+    "impactMessage": "Votre investissement de {amount} € crée un impact direct de {impact} bénéficiaires et acteurs du changement."
+  },
+  "trust": {
+    "subtitle": "Nos partenaires",
+    "title": "Ils nous font confiance"
+  },
+  "collaboration": {
+    "title": "Collaborons",
+    "subtitle": "sur l'avenir",
+    "subtitle2": "Ensemble.",
+    "description": "Nous recherchons des partenaires visionnaires pour accélérer l'adoption de solutions contraceptives innovantes et accessibles.",
+    "button": "Nous rejoindre",
+    "benefits": "Partenaires et investisseurs",
+    "benefit1": "Accès à une technologie révolutionnaire",
+    "benefit2": "Marché en croissance rapide",
+    "benefit3": "Impact sociétal positif"
+  },
+  "footer": {
+    "tagline": "Révolutionner la contraception masculine pour un meilleur avenir",
+    "productTitle": "Produit",
+    "about": "À propos",
+    "technology": "Technologie",
+    "studies": "Études",
+    "companyTitle": "Entreprise",
+    "blog": "Blog",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "legalTitle": "Légal",
+    "privacy": "Confidentialité",
+    "termsOfUse": "Conditions d'utilisation",
+    "legalNotice": "Mentions légales",
+    "copyright": "© 2024 Andro-Switch. Tous droits réservés.",
+    "social": "Réseaux sociaux",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook"
+  },
+  "buttons": {
+    "learnMore": "En savoir plus",
+    "readMore": "Lire la suite",
+    "joinUs": "Nous rejoindre",
+    "exploreTool": "Explorer l'outil ROI",
+    "becomePartner": "Devenir partenaire"
+  },
+  "gate": {
+  "thorem": "THOREME-CORE",
+  "title": "Andro-Switch",
+  "description1": "Premier dispositif médical de contraception thermique masculine",
+  "description2": "Participez à la révolution !",
+  "inputPlaceholder": "Code d'accès",
+  "submitButton": "ENTREZ LE FUTUR",
+  "verifying": "Vérification...",
+  "accessNote": "Accès réservé aux initiés",
+  "errorIncorrect": "Code d'accès incorrect"
+}
+}

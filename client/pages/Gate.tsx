@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import TorusScene from "@/components/TorusScene";
 import HUD from "@/components/HUD";
@@ -46,17 +45,6 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900 flex items-center justify-center overflow-hidden relative font-display">
-      {/* Back Button */}
-      <motion.button
-        onClick={handleLogout}
-        className="absolute top-6 left-6 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        title="Back"
-      >
-        <ArrowLeft className="w-5 h-5" />
-      </motion.button>
-
       {/* 3D Torus - Wireframe, Circling Title */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
         <Suspense fallback={<div className="w-full h-full bg-black" />}>
@@ -109,9 +97,9 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <p className="text-xs text-gray-400 font-light">
-              Premier dispositif médical de contraception thermique masculine
+              First male thermal contraception medical device
               <br />
-              Participez à la révolution !
+              Join the revolution!
             </p>
           </motion.div>
 
@@ -130,7 +118,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
                 <input
                   ref={inputRef}
                   type="password"
-                  placeholder="Code d'accès"
+                  placeholder="Password"
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -159,7 +147,7 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
                 whileTap={{ scale: 0.95 }}
                 className="w-full px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold rounded-full font-display transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
-                {isLoading ? "Vérification..." : "ENTREZ LE FUTUR"}
+                {isLoading ? "Checking..." : "ENTER THE FUTUR"}
               </motion.button>
             </motion.form>
 

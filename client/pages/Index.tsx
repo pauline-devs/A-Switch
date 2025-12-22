@@ -1,7 +1,9 @@
-import { ArrowRight, MoreVertical, ArrowLeft } from "lucide-react";
+import { ArrowRight, MoreVertical } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -75,7 +77,7 @@ const HoverCard = ({ card }: { card: CardData }) => {
     <motion.div
       className={`${card.bgGradient} rounded-2xl ${card.textColor} cursor-pointer h-full flex flex-col overflow-hidden relative transition-all duration-2000`}
       variants={itemVariants}
-      whileHover={{ y: -3 }} 
+      whileHover={{ y: -3 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
@@ -94,21 +96,21 @@ const HoverCard = ({ card }: { card: CardData }) => {
         </div>
 
         <motion.a
-            href={card.articleUrl}
-            className="inline-flex items-center gap-2 font-semibold px-3 py-1 rounded-lg bg-white/20 hover:bg-white/30 text-xs transition-all duration-200 w-fit"
+          href={card.articleUrl}
+          className="inline-flex items-center gap-2 font-semibold px-3 py-1 rounded-lg bg-white/20 hover:bg-white/30 text-xs transition-all duration-200 w-fit"
+        >
+          <span>En savoir plus</span>
+          <motion.div
+            whileHover={{ x: 2 }}
+            transition={{ duration: 0.2 }}
           >
-            <span>En savoir plus</span>
-            <motion.div
-              whileHover={{ x: 2 }}
-              transition={{ duration: 0.2 }}
-            >
-              <ArrowRight className="w-5 h-5" />
-            </motion.div>
-          </motion.a>
+            <ArrowRight className="w-5 h-5" />
+          </motion.div>
+        </motion.a>
       </div>
 
       {/* Image area - fills bottom portion with detail text overlay on hover */}
-      <div className="relative h-32 overflow-hidden">
+      <div className="relative h-32">
         <motion.img
           src={card.imageUrl}
           alt={card.title}
@@ -116,7 +118,7 @@ const HoverCard = ({ card }: { card: CardData }) => {
           initial={{ opacity: 1 }}
           animate={{ opacity: isHovered ? 0.3 : 1 }}
           transition={{ duration: 0.2 }}
-           loading="lazy"
+          loading="lazy"
           decoding="async"
         />
 
@@ -137,33 +139,35 @@ const HoverCard = ({ card }: { card: CardData }) => {
 };
 
 const InvestorTool = () => {
+  const { t } = useTranslation();
   const [investment, setInvestment] = useState(100000);
 
   const impactMetrics = [
     {
-      label: "Femmes éduquées",
+      label: t("investorTool.educatedWomen"),
       value: Math.floor(investment / 10),
       unit: "",
       color: "from-pink-400 to-pink-600"
     },
     {
-      label: "Professionnels formés",
+      label: t("investorTool.trainedProfessionals"),
       value: Math.floor(investment / 50),
       unit: "",
       color: "from-blue-400 to-blue-600"
     },
     {
-      label: "Appareils accessibles",
+      label: t("investorTool.accessibleDevices"),
       value: Math.floor(investment / 500),
       unit: "",
       color: "from-purple-400 to-purple-600"
     },
     {
-      label: "Potentiel de marché",
+      label: t("investorTool.marketPotential"),
       value: Math.floor((investment * 120) / 1000),
       unit: "K€",
       color: "from-green-400 to-green-600"
     }
+
   ];
 
   const formatNumber = (num: number) => {
@@ -181,7 +185,7 @@ const InvestorTool = () => {
       >
         <motion.div className="mb-6" variants={itemVariants}>
           <label className="text-lg font-semibold text-white mb-2 block">
-            Montant d'investissement
+            {t("investorTool.investmentLabel")}
           </label>
           <div className="text-3xl font-bold text-blue-400 mb-6">
             {formatNumber(investment)} €
@@ -196,15 +200,14 @@ const InvestorTool = () => {
             onChange={(e) => setInvestment(Number(e.target.value))}
             className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
             style={{
-              background: `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${
-                ((investment - 10000) / (10000000 - 10000)) * 100
-              }%, #374151 ${((investment - 10000) / (10000000 - 10000)) * 100}%, #374151 100%)`
+              background: `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${((investment - 10000) / (10000000 - 10000)) * 100
+                }%, #374151 ${((investment - 10000) / (10000000 - 10000)) * 100}%, #374151 100%)`
             }}
           />
 
           <div className="flex justify-between text-xs text-gray-400 mt-2">
-            <span>10 K€</span>
-            <span>10 M€</span>
+            <span>{t("investorTool.minAmount")}</span>
+            <span>{t("investorTool.maxAmount")}</span>
           </div>
         </motion.div>
 
@@ -214,11 +217,10 @@ const InvestorTool = () => {
             <motion.button
               key={amount}
               onClick={() => setInvestment(amount)}
-              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                investment === amount
+              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${investment === amount
                   ? "bg-blue-500 text-white"
                   : "bg-white/10 text-white hover:bg-white/20"
-              }`}
+                }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -239,7 +241,7 @@ const InvestorTool = () => {
         {impactMetrics.map((metric, idx) => (
           <motion.div
             key={idx}
-            className={`relative overflow-hidden rounded-xl p-6 bg-gradient-to-br ${metric.color} shadow-lg`}
+            className={`relative rounded-xl p-6 bg-gradient-to-br ${metric.color} shadow-lg`}
             variants={itemVariants}
             whileHover={{ y: -5, scale: 1.02 }}
             transition={{ duration: 0.3 }}
@@ -279,10 +281,10 @@ const InvestorTool = () => {
                 {metric.unit && <span className="text-2xl ml-1">{metric.unit}</span>}
               </motion.div>
               <motion.p className="text-white/60 text-xs mt-2">
-                {metric.label === "Femmes éduquées" && "bénéficiaires"}
-                {metric.label === "Professionnels formés" && "en santé"}
-                {metric.label === "Appareils accessibles" && "projections"}
-                {metric.label === "Potentiel de marché" && "génération"}
+                {metric.label === t("investorTool.educatedWomen") && t("investorTool.beneficiaries")}
+                {metric.label === t("investorTool.trainedProfessionals") && t("investorTool.healthSector")}
+                {metric.label === t("investorTool.accessibleDevices") && t("investorTool.projections")}
+                {metric.label === t("investorTool.marketPotential") && t("investorTool.generation")}
               </motion.p>
             </div>
           </motion.div>
@@ -296,9 +298,8 @@ const InvestorTool = () => {
         whileHover={{ borderColor: "rgb(59, 130, 246)" }}
       >
         <motion.p className="text-white/80">
-          Votre investissement de{" "}
-          <span className="font-bold text-blue-400">{formatNumber(investment)} €</span> crée un
-          impact direct de{" "}
+          {t("investorTool.impactMessagePrefix")}{" "}
+          <span className="font-bold text-blue-400">{formatNumber(investment)} €</span> {t("investorTool.impactMessageMiddle")}{" "}
           <span className="font-bold text-green-400">
             {formatNumber(
               Math.floor(investment / 10) +
@@ -306,7 +307,7 @@ const InvestorTool = () => {
               Math.floor(investment / 500)
             )}
           </span>{" "}
-          bénéficiaires et acteurs du changement.
+          {t("investorTool.impactMessageSuffix")}
         </motion.p>
       </motion.div>
     </div>
@@ -315,6 +316,7 @@ const InvestorTool = () => {
 
 
 export default function Index() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCarouselHovered, setIsCarouselHovered] = useState(false);
@@ -326,10 +328,10 @@ export default function Index() {
 
 
   const navigationLinks = [
-    { label: "Accueil", href: "#hero" },
-    { label: "Innovation", href: "#innovation" },
-    { label: "Roadmap", href: "#roadmap" },
-    { label: "Contact", href: "#collaboration" }
+    { label: t("nav.home"), href: "#hero" },
+    { label: t("nav.innovation"), href: "#innovation" },
+    { label: t("nav.roadmap"), href: "#roadmap" },
+    { label: t("nav.contact"), href: "#collaboration" }
   ];
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -344,17 +346,6 @@ export default function Index() {
 
   return (
     <div className="w-full">
-      {/* Back Button */}
-      <motion.button
-        onClick={handleLogout}
-        className="hidden lg:block fixed lg:top-3 left-3 z-[60] p-1.5 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-900 transition-colors"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        title="Back"
-      >
-        <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-      </motion.button>
-
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -374,13 +365,14 @@ export default function Index() {
                 {link.label}
               </a>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Toggle Button - Three Dots */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="Toggle mobile menu"
+            aria-label={t("misc.toggleMenu")}
           >
             <MoreVertical className="w-6 h-6 text-gray-900" />
           </button>
@@ -394,7 +386,7 @@ export default function Index() {
             height: isMobileMenuOpen ? "auto" : 0
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden border-t border-gray-200"
+          className="md:hidden border-t border-gray-200"
         >
           <div className="px-4 py-4 space-y-3 bg-white">
             {navigationLinks.map((link, idx) => (
@@ -416,6 +408,7 @@ export default function Index() {
                 {link.label}
               </motion.a>
             ))}
+            <LanguageSwitcher />
           </div>
         </motion.div>
       </nav>
@@ -434,25 +427,23 @@ export default function Index() {
               className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-8"
               variants={itemVariants}
             >
-              Investissez
+              {t("heroTitle.line1")}
               <br />
-              dans le futur
+              {t("heroTitle.line2")}
               <br />
-              de la contraception
+              {t("heroTitle.line3")}
             </motion.h1>
             <motion.p
               className="text-gray-300 text-lg mb-8"
               variants={itemVariants}
             >
-              Andro-Switch : Premier dispositif médical 
-              <br/>
-              de contraception thermique masculine au monde.
+              {t("heroDescription")}
             </motion.p>
             <motion.button
               className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg flex items-center gap-2 transition-colors"
               variants={itemVariants}
             >
-              En savoir plus
+              {t("heroButton")}
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </motion.div>
@@ -473,13 +464,13 @@ export default function Index() {
               className="text-blue-600 font-bold text-sm uppercase tracking-wider mb-2"
               variants={itemVariants}
             >
-              L'innovation Andro-Switch
+              {t("innovationSubtitle")}
             </motion.p>
             <motion.h2
               className="font-display text-3xl font-bold text-gray-900"
               variants={itemVariants}
             >
-              <TextReveal>Révolutionner la contraception</TextReveal>
+              <TextReveal>{t("innovationTitle")}</TextReveal>
             </motion.h2>
           </motion.div>
 
@@ -498,7 +489,7 @@ export default function Index() {
                 2027
               </motion.h3>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Lancement commercial prévu
+                {t("innovationStats.yearDesc")}
               </motion.p>
             </motion.div>
 
@@ -509,7 +500,7 @@ export default function Index() {
               >
                 1.2B
               </motion.h3>
-              <motion.p className="text-gray-600 text-sm" variants={itemVariants}>Marché potentiel estimé</motion.p>
+              <motion.p className="text-gray-600 text-sm" variants={itemVariants}>{t("innovationStats.marketDesc")}</motion.p>
             </motion.div>
 
             <motion.div className="text-center" variants={itemVariants}>
@@ -520,7 +511,7 @@ export default function Index() {
                 0
               </motion.h3>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Effets secondaires significatifs
+                {t("innovationStats.sideEffectsDesc")}
               </motion.p>
             </motion.div>
 
@@ -532,7 +523,7 @@ export default function Index() {
                 70%
               </motion.h3>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                des français prêt à investir dans la solution Andro Switch.
+                {t("innovationStats.willingnessDesc")}
               </motion.p>
             </motion.div>
           </motion.div>
@@ -552,14 +543,14 @@ export default function Index() {
                   className="font-semibold text-gray-900"
                   variants={itemVariants}
                 >
-                  <TextReveal>Technologie brevetée</TextReveal>
+                  <TextReveal>{t("innovationFeatures.title1")}</TextReveal>
                 </motion.h3>
               </div>
               <motion.p
                 className="text-gray-600 text-sm"
                 variants={itemVariants}
               >
-                Solution novatrice protégée par brevets internationaux
+                {t("innovationFeatures.desc1")}
               </motion.p>
             </motion.div>
 
@@ -570,14 +561,14 @@ export default function Index() {
                   className="font-semibold text-gray-900"
                   variants={itemVariants}
                 >
-                  <TextReveal>Études cliniques complètes</TextReveal>
+                  <TextReveal>{t("innovationFeatures.title2")}</TextReveal>
                 </motion.h3>
               </div>
               <motion.p
                 className="text-gray-600 text-sm"
                 variants={itemVariants}
               >
-                Validation scientifique rigoureuse et transparente
+                {t("innovationFeatures.desc2")}
               </motion.p>
             </motion.div>
 
@@ -587,13 +578,13 @@ export default function Index() {
                 <motion.h3
                   className="font-semibold text-gray-900"
                   variants={itemVariants}
-                ><TextReveal>Impact global</TextReveal></motion.h3>
+                ><TextReveal>{t("innovationFeatures.title3")}</TextReveal></motion.h3>
               </div>
               <motion.p
                 className="text-gray-600 text-sm"
                 variants={itemVariants}
               >
-                Améliore la santé et l'autonomie des femmes
+                {t("innovationFeatures.desc3")}
               </motion.p>
             </motion.div>
           </motion.div>
@@ -614,17 +605,15 @@ export default function Index() {
               className="font-display text-4xl sm:text-5xl font-bold mb-4"
               variants={itemVariants}
             >
-              <TextReveal>Andro-Switch est</TextReveal>
+              <TextReveal>{t("autotest.title1")}</TextReveal>
               <br />
-              <TextReveal>calibré pour le marché </TextReveal>
+              <TextReveal>{t("autotest.title2")}</TextReveal>
             </motion.h2>
             <motion.p
               className="text-gray-400 max-w-2xl"
               variants={itemVariants}
             >
-              Notre solution d'autodiagnostic révolutionne le modèle économique
-              de la contraception en le rendant immédiatement viable.
-              L'autotest et accessoires indispensable pour utiliser l’anneau, sont déjà disponible en pharmacie.
+              {t("autotest.description")}
             </motion.p>
           </motion.div>
 
@@ -638,9 +627,9 @@ export default function Index() {
             {[
               {
                 id: "card1",
-                title: "LA CONTRACEPTION MASCULINE, ON EN EST OÙ ?",
-                subtitle: "Découvrez l'état actuel des solutions contraceptives",
-                detail: "Explorez le paysage actuel de la contraception masculine, ses avancées et les défis à surmonter pour une meilleure accessibilité.",
+                title: t("cardsSection.card1Title"),
+                subtitle: t("cardsSection.card1Subtitle"),
+                detail: t("cardsSection.card1Detail"),
                 imageUrl: "https://images.unsplash.com/photo-1576091160550-112173f7f869?w=500&h=300&fit=crop",
                 bgGradient: "bg-gradient-to-br from-pink-400 to-pink-600",
                 textColor: "text-gray-950",
@@ -648,9 +637,9 @@ export default function Index() {
               },
               {
                 id: "card2",
-                title: "TECHNOLOGIE AVANCÉE",
-                subtitle: "Un produit eco-responsable et éthique, qui s’inscrit dans un parcours slow-low tech et une approche circuit-court.",
-                detail: "Découvrez notre technologie révolutionnaire qui combine efficacité, sécurité et accessibilité pour le contrôle naturel de la fertilité.",
+                title: t("cardsSection.card2Title"),
+                subtitle: t("cardsSection.card2Subtitle"),
+                detail: t("cardsSection.card2Detail"),
                 imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop",
                 bgGradient: "bg-gradient-to-br from-purple-500 to-purple-700",
                 textColor: "text-white",
@@ -658,9 +647,9 @@ export default function Index() {
               },
               {
                 id: "card3",
-                title: "RESPONSABILITÉ PARTAGÉE",
-                subtitle: "Vers une égalité de la charge contraceptive.",
-                detail: "Comprendre comment la contraception masculine redéfinit l'équilibre des responsabilités reproductives dans les couples modernes.",
+                title: t("cardsSection.card3Title"),
+                subtitle: t("cardsSection.card3Subtitle"),
+                detail: t("cardsSection.card3Detail"),
                 imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
                 bgGradient: "bg-gradient-to-br from-orange-300 to-orange-500",
                 textColor: "text-gray-950",
@@ -668,9 +657,9 @@ export default function Index() {
               },
               {
                 id: "card4",
-                title: "ESSAIS CLINIQUES",
-                subtitle: "Résultats prometteurs en cours de certification.",
-                detail: "Découvrez les résultats de nos essais cliniques rigoureux qui démontrent l'efficacité et la sécurité de notre solution.",
+                title: t("cardsSection.card4Title"),
+                subtitle: t("cardsSection.card4Subtitle"),
+                detail: t("cardsSection.card4Detail"),
                 imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5f3f2bbbb?w=500&h=300&fit=crop",
                 bgGradient: "bg-gray-800",
                 textColor: "text-white",
@@ -678,9 +667,9 @@ export default function Index() {
               },
               {
                 id: "card5",
-                title: "TÉMOIGNAGES ET COMMUNAUTÉ ACTIVE",
-                subtitle: "Histoires inspirantes d'utilisateurs",
-                detail: "Découvrez les témoignages authentiques de ceux qui ont choisi de prendre responsabilité de leur contraception.",
+                title: t("cardsSection.card5Title"),
+                subtitle: t("cardsSection.card5Subtitle"),
+                detail: t("cardsSection.card5Detail"),
                 imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop",
                 bgGradient: "bg-yellow-300",
                 textColor: "text-gray-950",
@@ -688,14 +677,15 @@ export default function Index() {
               },
               {
                 id: "card6",
-                title: "APPEL À L'AVANCÉE MÉDICALE",
-                subtitle: "Vers une révolution contraceptive et économique: l'urgence de l'action collective.",
-                detail: "Explorez comment l'innovation en contraception masculine peut transformer la santé reproductive et l'égalité des genres.",
+                title: t("cardsSection.card6Title"),
+                subtitle: t("cardsSection.card6Subtitle"),
+                detail: t("cardsSection.card6Detail"),
                 imageUrl: "https://images.unsplash.com/photo-1543269865-cbdf26cecb46?w=500&h=300&fit=crop",
                 bgGradient: "bg-purple-600",
                 textColor: "text-white",
                 articleUrl: "/articles/impact-societal",
               },
+
             ].map((card) => (
               <HoverCard key={card.id} card={card} />
             ))}
@@ -716,15 +706,13 @@ export default function Index() {
               className="font-display text-4xl font-bold text-gray-900 mb-4"
               variants={itemVariants}
             >
-              <TextReveal>Vision long-terme:</TextReveal>
+              <TextReveal>{t("visionSection.title")}</TextReveal>
             </motion.h2>
             <motion.p
               className="text-gray-600 mb-12 max-w-3xl"
               variants={itemVariants}
             >
-              Ouvrir Andro-Switch aux marchés de l'Europe,
-              <br />
-              des USA, du Canada.
+              {t("visionSection.description")}
             </motion.p>
           </motion.div>
 
@@ -740,11 +728,10 @@ export default function Index() {
                 className="font-semibold text-gray-900 mb-3"
                 variants={itemVariants}
               >
-                <TextReveal>Phase 1: Europe</TextReveal>
+                <TextReveal>{t("visionSection.phase1")}</TextReveal>
               </motion.h3>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Lancement initial sur les marchés européens avec partenaires
-                locaux
+                {t("visionSection.phase1Desc")}
               </motion.p>
             </motion.div>
 
@@ -753,10 +740,10 @@ export default function Index() {
                 className="font-semibold text-gray-900 mb-3"
                 variants={itemVariants}
               >
-                <TextReveal>Phase 2: Amérique du Nord</TextReveal>
+                <TextReveal>{t("visionSection.phase2")}</TextReveal>
               </motion.h3>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Expansion vers les États-Unis et le Canada
+                {t("visionSection.phase2Desc")}
               </motion.p>
             </motion.div>
 
@@ -765,10 +752,10 @@ export default function Index() {
                 className="font-semibold text-gray-900 mb-3"
                 variants={itemVariants}
               >
-                <TextReveal>Phase 3: Global</TextReveal>
+                <TextReveal>{t("visionSection.phase3")}</TextReveal>
               </motion.h3>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Présence mondiale et impact de santé publique majeur
+                {t("visionSection.phase3Desc")}
               </motion.p>
             </motion.div>
           </motion.div>
@@ -789,10 +776,10 @@ export default function Index() {
                 className="font-semibold text-gray-900 mb-3"
                 variants={itemVariants}
               >
-                Quels sont les obstacles ?
+                {t("visionSection.faqTitle1")}
               </motion.h4>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Régulation, acceptabilité sociale, et accès aux marchés
+                {t("visionSection.faqAns1")}
               </motion.p>
             </motion.div>
 
@@ -804,10 +791,10 @@ export default function Index() {
                 className="font-semibold text-gray-900 mb-3"
                 variants={itemVariants}
               >
-                Comment les surmonter ?
+                {t("visionSection.faqTitle2")}
               </motion.h4>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Études cliniques robustes et partenariats stratégiques
+                {t("visionSection.faqAns2")}
               </motion.p>
             </motion.div>
 
@@ -819,17 +806,18 @@ export default function Index() {
                 className="font-semibold text-gray-900 mb-3"
                 variants={itemVariants}
               >
-                Quel impact ?
+                {t("visionSection.faqTitle3")}
               </motion.h4>
               <motion.p className="text-gray-600 text-sm" variants={itemVariants}>
-                Révolutionner l'accès à la contraception masculine sûre
+                {t("visionSection.faqAns3")}
               </motion.p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-    {/* {false && ( */}
+
+      {/* {false && ( */}
       <section id="roadmap" className="py-20 bg-gradient-to-br from-gray-900 to-gray-950 text-white rounded-tl-[60px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Roadmap & Investor Impact Section */}
@@ -845,9 +833,9 @@ export default function Index() {
               className="font-display text-5xl sm:text-6xl font-bold mb-16 text-center"
               variants={itemVariants}
             >
-              <TextReveal>Roadmap stratégique</TextReveal>
+              <TextReveal>{t("roadmapSection.title")}</TextReveal>
               <br />
-              <TextReveal>Andro-Switch</TextReveal>
+              <TextReveal>{t("roadmapSection.subtitle")}</TextReveal>
             </motion.h2>
 
             {/* Two Column Layout */}
@@ -869,13 +857,13 @@ export default function Index() {
                     className="font-display text-2xl sm:text-3xl font-bold mb-4"
                     variants={itemVariants}
                   >
-                    Notre vision
+                    {t("roadmapSection.visionTitle")}
                   </motion.h3>
                   <motion.p
                     className="text-gray-400 text-sm leading-relaxed mb-6"
                     variants={itemVariants}
                   >
-                    Notre vision: Une démarche pensée sur le long-terme: voilà ce qu’on a fait, voilà où on va, et c’est ça pour nous tous!
+                    {t("roadmapSection.visionDesc")}
                   </motion.p>
                 </div>
 
@@ -893,14 +881,14 @@ export default function Index() {
                   variants={containerVariants}
                 >
                   <motion.div variants={itemVariants}>
-                    <div className="text-4xl font-bold text-white">4</div>
-                    <div className="text-gray-400 text-sm">Strategic Phases</div>
+                    <div className="text-4xl font-bold text-white">{t("roadmapSection.statsCount")}</div>
+                    <div className="text-gray-400 text-sm">{t("roadmapSection.statsDesc")}</div>
                   </motion.div>
                   <motion.div
                     className="text-gray-400 text-sm leading-relaxed"
                     variants={itemVariants}
                   >
-                    From current initiatives through worldwide availability, our roadmap spans 2024-2030+ delivering integrated AI solutions, clinical validation, market expansion, and global accessibility.
+                    {t("roadmapSection.statsFullDesc")}
                   </motion.div>
                 </motion.div>
 
@@ -916,7 +904,7 @@ export default function Index() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Read More
+                    {t("roadmapSection.readMore")}
                     <ArrowRight className="w-5 h-5" />
                   </motion.a>
                   <motion.a
@@ -926,7 +914,7 @@ export default function Index() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Learn More
+                    {t("roadmapSection.learnMore")}
                     <ArrowRight className="w-5 h-5" />
                   </motion.a>
                 </motion.div>
@@ -955,32 +943,32 @@ export default function Index() {
                   {[
                     {
                       icon: "●",
-                      title: "2018 - Recherche et développement",
-                      description: "Our Technology AI Generator enables advanced analysis and intelligence generation.",
+                      title: t("roadmapSection.timeline1"),
+                      description: t("roadmapSection.timeline1Desc"),
                       color: "purple"
                     },
                     {
                       icon: "●",
-                      title: "2020 - Brevet international",
-                      description: "Our Technology AI Generator website empowers individuals and organizations.",
+                      title: t("roadmapSection.timeline2"),
+                      description: t("roadmapSection.timeline2Desc"),
                       color: "blue"
                     },
                     {
                       icon: "●",
-                      title: "2022 - Tests cliniques phase 1",
-                      description: "AI-powered tools for healthcare professionals and medical training.",
+                      title: t("roadmapSection.timeline3"),
+                      description: t("roadmapSection.timeline3Desc"),
                       color: "purple"
                     },
                     {
                       icon: "●",
-                      title: "2027 - Certification CE",
-                      description: "AI-powered tools for healthcare professionals and medical training.",
+                      title: t("roadmapSection.timeline4"),
+                      description: t("roadmapSection.timeline4Desc"),
                       color: "purple"
                     },
                     {
                       icon: "●",
-                      title: "2028 - Expansion mondiale",
-                      description: "AI-powered tools for healthcare professionals and medical training.",
+                      title: t("roadmapSection.timeline5"),
+                      description: t("roadmapSection.timeline5Desc"),
                       color: "purple"
                     }
                   ].map((feature, idx) => (
@@ -1005,9 +993,8 @@ export default function Index() {
                     >
                       <div className="flex items-start gap-3">
                         <motion.span
-                          className={`text-lg mt-0.5 ${
-                            feature.color === "purple" ? "text-purple-400" : "text-blue-400"
-                          }`}
+                          className={`text-lg mt-0.5 ${feature.color === "purple" ? "text-purple-400" : "text-blue-400"
+                            }`}
                           animate={{ scale: [1, 1.2, 1] }}
                           transition={{ duration: 2, repeat: Infinity }}
                         >
@@ -1040,7 +1027,7 @@ export default function Index() {
                 className="font-display text-3xl font-bold mb-8"
                 variants={itemVariants}
               >
-                <TextReveal>Strategic Roadmap Phases</TextReveal>
+                <TextReveal>Phases stratégiques de la feuille de route</TextReveal>
               </motion.h3>
 
               <motion.div
@@ -1061,37 +1048,37 @@ export default function Index() {
               >
                 {[
                   {
-                    year: "2024-2025",
-                    title: "Phase actuelle",
-                    description: "Campagne de sensibilisation mondiale • Développement d'outils IA",
+                    year: t("roadmapSection.phase1Year"),
+                    title: t("roadmapSection.phase1Title"),
+                    description: t("roadmapSection.phase1Desc"),
                     highlight: true
                   },
                   {
-                    year: "2026-2027",
-                    title: "Expansion clinique",
-                    description: "Essais de phase final • Approbations réglementaires",
+                    year: t("roadmapSection.phase2Year"),
+                    title: t("roadmapSection.phase2Title"),
+                    description: t("roadmapSection.phase2Desc"),
                     highlight: false
                   },
                   {
-                    year: "2028-2029",
-                    title: "Préparation marché",
-                    description: "Mise en place distribution • Formation professionnels",
+                    year: t("roadmapSection.phase3Year"),
+                    title: t("roadmapSection.phase3Title"),
+                    description: t("roadmapSection.phase3Desc"),
                     highlight: false
                   },
                   {
-                    year: "2030+",
-                    title: "Disponibilité",
-                    description: "Produit en pharmacies • Impact ODD atteint",
+                    year: t("roadmapSection.phase4Year"),
+                    title: t("roadmapSection.phase4Title"),
+                    description: t("roadmapSection.phase4Desc"),
                     highlight: true
                   }
+
                 ].map((phase, idx) => (
                   <motion.div
                     key={idx}
-                    className={`relative px-6 py-8 rounded-xl overflow-hidden transition-all duration-300 group cursor-pointer ${
-                      phase.highlight
+                    className={`relative px-6 py-8 rounded-xl transition-all duration-300 group cursor-pointer ${phase.highlight
                         ? "bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-2 border-blue-400/50"
                         : "bg-gray-800/30 border border-gray-700/50"
-                    }`}
+                      }`}
                     variants={{
                       hidden: {
                         opacity: 0,
@@ -1124,29 +1111,26 @@ export default function Index() {
                     />
 
                     <motion.h4
-                      className={`font-display text-lg font-bold mb-2 ${
-                        phase.highlight ? "text-blue-300" : "text-gray-500"
-                      }`}
+                      className={`font-display text-lg font-bold mb-2 ${phase.highlight ? "text-blue-300" : "text-gray-500"
+                        }`}
                       variants={itemVariants}
                     >
                       {phase.year}
                     </motion.h4>
                     <motion.h5
-                      className={`font-semibold mb-2 transition-colors ${
-                        phase.highlight
+                      className={`font-semibold mb-2 transition-colors ${phase.highlight
                           ? "text-white group-hover:text-blue-200"
                           : "text-gray-400 group-hover:text-gray-300"
-                      }`}
+                        }`}
                       variants={itemVariants}
                     >
                       {phase.title}
                     </motion.h5>
                     <motion.p
-                      className={`text-sm transition-colors ${
-                        phase.highlight
+                      className={`text-sm transition-colors ${phase.highlight
                           ? "text-gray-400 group-hover:text-gray-300"
                           : "text-gray-500 group-hover:text-gray-400"
-                      }`}
+                        }`}
                       variants={itemVariants}
                     >
                       {phase.description}
@@ -1169,20 +1153,21 @@ export default function Index() {
               className="font-display text-3xl font-bold mb-4"
               variants={itemVariants}
             >
-              Calculateur d'impact investisseur
+              {t("roadmapSection.calculatorTitle")}
             </motion.h3>
             <motion.p
               className="text-gray-400 mb-8 max-w-2xl"
               variants={itemVariants}
             >
-              Visualisez l'impact direct de votre investissement sur la révolution contraceptive
+              {t("roadmapSection.calculatorDesc")}
             </motion.p>
 
             <InvestorTool />
           </motion.div>
+
         </div>
       </section>
-{/* )} */}
+      {/* )} */}
 
       {/* Trust Section */}
       <section id="trust" className="py-20 bg-gray-950 text-white rounded-br-[60px]">
@@ -1191,7 +1176,7 @@ export default function Index() {
             className="text-blue-400 font-bold text-sm uppercase tracking-wider mb-2"
             variants={itemVariants}
           >
-              <TextReveal>Nos Partenaires</TextReveal>
+            <TextReveal>{t("trustSection.subtitle")}</TextReveal>
           </motion.h3>
           <motion.h2
             className="font-display text-4xl font-bold mb-12"
@@ -1200,7 +1185,7 @@ export default function Index() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
           >
-            <TextReveal>Ils nous font confiance</TextReveal>
+            <TextReveal>{t("trustSection.title")}</TextReveal>
           </motion.h2>
 
           {/* Logo Carousel */}
@@ -1254,7 +1239,6 @@ export default function Index() {
                     alt={partner.name}
                     className="max-w-[90%] max-h-[90%] object-contain"
                     onError={(e) => {
-                      // Fallback to text if image fails to load
                       (e.target as HTMLImageElement).style.display = 'none';
                       const parent = (e.target as HTMLImageElement).parentElement;
                       if (parent) {
@@ -1264,7 +1248,6 @@ export default function Index() {
                   />
                 </motion.div>
               ))}
-              {/* Duplicate logos for seamless loop */}
               {[
                 {
                   name: "Santé Publique France",
@@ -1334,22 +1317,20 @@ export default function Index() {
                 className="font-display text-4xl font-bold text-gray-900 mb-4"
                 variants={itemVariants}
               >
-                <TextReveal>Collaborons</TextReveal>
+                <TextReveal>{t("collaborationSection.title")}</TextReveal>
                 <br />
-                <TextReveal>au futur</TextReveal>
+                <TextReveal>{t("collaborationSection.subtitle")}</TextReveal>
                 <br />
-                <TextReveal>ensemble.</TextReveal>
+                <TextReveal>{t("collaborationSection.subtitle2")}</TextReveal>
               </motion.h2>
               <motion.p className="text-gray-600 mb-8" variants={itemVariants}>
-                Nous recherchons des partenaires visionnaires pour accélérer
-                l'adoption de solutions contraceptives innovantes et
-                accessibles.
+                {t("collaborationSection.description")}
               </motion.p>
               <motion.button
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg flex items-center gap-2 transition-colors"
                 variants={itemVariants}
               >
-                Nous rejoindre
+                {t("collaborationSection.button")}
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
             </motion.div>
@@ -1362,7 +1343,7 @@ export default function Index() {
                 className="font-display text-2xl font-bold mb-4"
                 variants={itemVariants}
               >
-                Partenaires et Investisseurs
+                {t("collaborationSection.partnersTitle")}
               </motion.h3>
               <ul className="space-y-3 text-sm">
                 <motion.li
@@ -1370,21 +1351,21 @@ export default function Index() {
                   variants={itemVariants}
                 >
                   <div className="w-2 h-2 bg-white rounded-full"></div>
-                  Accès à une technologie révolutionnaire
+                  {t("collaborationSection.benefit1")}
                 </motion.li>
                 <motion.li
                   className="flex items-center gap-3"
                   variants={itemVariants}
                 >
                   <div className="w-2 h-2 bg-white rounded-full"></div>
-                  Marché en croissance rapide
+                  {t("collaborationSection.benefit2")}
                 </motion.li>
                 <motion.li
                   className="flex items-center gap-3"
                   variants={itemVariants}
                 >
                   <div className="w-2 h-2 bg-white rounded-full"></div>
-                  Impact sociétal positif
+                  {t("collaborationSection.benefit3")}
                 </motion.li>
               </ul>
             </motion.div>
@@ -1398,68 +1379,68 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-display font-bold text-white mb-4">
-                Andro-Switch
+                {t("footerSection.brandTitle")}
               </h3>
               <p className="text-sm">
-                Révolutionner la contraception masculine pour un avenir meilleur
+                {t("footerSection.tagline")}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Produit</h4>
+              <h4 className="font-semibold text-white mb-4">{t("footerSection.productTitle")}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    À propos
+                    {t("footerSection.productAbout")}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Technologie
+                    {t("footerSection.productTechnology")}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Études
+                    {t("footerSection.productStudies")}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Entreprise</h4>
+              <h4 className="font-semibold text-white mb-4">{t("footerSection.companyTitle")}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Blog
+                    {t("footerSection.companyBlog")}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Carrières
+                    {t("footerSection.companyCareers")}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Contact
+                    {t("footerSection.companyContact")}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Légal</h4>
+              <h4 className="font-semibold text-white mb-4">{t("footerSection.legalTitle")}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Confidentialité
+                    {t("footerSection.legalPrivacy")}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    CGU
+                    {t("footerSection.legalTerms")}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Mentions légales
+                    {t("footerSection.legalNotice")}
                   </a>
                 </li>
               </ul>
@@ -1468,17 +1449,17 @@ export default function Index() {
 
           <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm">
-              © 2024 Andro-Switch. Tous droits réservés.
+              {t("footerSection.copyright")}
             </p>
             <div className="flex gap-4 mt-4 sm:mt-0">
               <a href="#" className="hover:text-white transition-colors">
-                Twitter
+                {t("footerSection.socialTwitter")}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                LinkedIn
+                {t("footerSection.socialLinkedin")}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                Facebook
+                {t("footerSection.socialFacebook")}
               </a>
             </div>
           </div>
