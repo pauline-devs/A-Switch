@@ -347,14 +347,14 @@
     "becomePartner": "Devenir partenaire"
   },
   "gate": {
-  "thorem": "THOREME-CORE",
+  "thorem": "THOREME-INVEST",
   "title": "Andro-Switch",
   "description1": "Premier dispositif médical de contraception thermique masculine",
   "description2": "Participez à la révolution !",
   "inputPlaceholder": "Code d'accès",
   "submitButton": "ENTREZ LE FUTUR",
   "verifying": "Vérification...",
-  "accessNote": "Accès réservé aux initiés",
+  "accessNote": "Accès premium invest",
   "errorIncorrect": "Code d'accès incorrect"
 },
 "hud": {

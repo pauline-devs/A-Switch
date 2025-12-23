@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, FormEvent, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Suspense } from "react";
@@ -20,6 +20,17 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+
+    const [showHUD, setShowHUD] = useState(window.innerWidth >= 900);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setShowHUD(window.innerWidth >= 900);
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,8 +69,14 @@ export default function Gate({ onUnlock, onLogout }: GateProps) {
         </Suspense>
 
         {/* HUD Elements - Smart positioning around torus */}
-        <HUD />
+        {/* HUD Overlay - Hidden on mobile */}
+        {showHUD && (
+          <div className="absolute inset-0 z-5 pointer-events-none">
+            <HUD />
+          </div>
+        )}
       </div>
+      
 
          {/* Language Switcher - Top Right */}
       <div className="absolute top-6 right-6 z-20">

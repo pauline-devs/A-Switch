@@ -97,6 +97,7 @@ const HoverCard = ({ card }: { card: CardData }) => {
 
         <motion.a
           href={card.articleUrl}
+          target='_blank'
           className="inline-flex items-center gap-1 font-semibold px-3 py-1 rounded-lg bg-white/20 hover:bg-white/30 text-xs transition-all duration-200 w-fit"
         >
           <span>En savoir plus</span>
@@ -643,7 +644,7 @@ export default function Index() {
                 imageUrl: "/thoreme-1.jpg",
                 bgGradient: "bg-gradient-to-br from-pink-400 to-pink-600",
                 textColor: "text-gray-950",
-                articleUrl: "/articles/contraception-masculine",
+                articleUrl: "/1-2025 Kidula THE IMPACT OF MALE CONTRACEPTION ON GLOBAL SEXUAL AND REPRODUCTIVE HEALTH AND RIGHTS complet.pdf",
               },
               {
                 id: "card2",
@@ -653,7 +654,7 @@ export default function Index() {
                 imageUrl: "/thoreme-ethical.png",
                 bgGradient: "bg-gradient-to-br from-purple-500 to-purple-700",
                 textColor: "text-white",
-                articleUrl: "/articles/technologie",
+                articleUrl: "/2-2022 Morlet Etude d'une innovation en contraception l'Andro-switch.pdf",
               },
               {
                 id: "card3",
@@ -663,7 +664,7 @@ export default function Index() {
                 imageUrl: "/thoreme-3.jpg",
                 bgGradient: "bg-gradient-to-br from-orange-300 to-orange-500",
                 textColor: "text-gray-950",
-                articleUrl: "/articles/responsabilite-partagee",
+                articleUrl: "/3-2024 Nguyen Demand for male contraceptionUSA.pdf",
               },
               {
                 id: "card4",
@@ -673,7 +674,7 @@ export default function Index() {
                 imageUrl: "/thoreme-4.jpg",
                 bgGradient: "bg-gray-800",
                 textColor: "text-white",
-                articleUrl: "/articles/essais-cliniques",
+                articleUrl: "/4-2024 --Rognier Revue litterature CMT efficacite .pdf",
               },
               {
                 id: "card5",
@@ -683,7 +684,7 @@ export default function Index() {
                 imageUrl: "/thoreme-5.jpg",
                 bgGradient: "bg-yellow-300",
                 textColor: "text-gray-950",
-                articleUrl: "/articles/temoignages",
+                articleUrl: "/5-2023 Lacroix se contracepter étude phénoménologique CRT.pdf",
               },
               {
                 id: "card6",
@@ -693,7 +694,7 @@ export default function Index() {
                 imageUrl: "/thoreme-6.jpg",
                 bgGradient: "bg-purple-600",
                 textColor: "text-white",
-                articleUrl: "/articles/impact-societal",
+                articleUrl: "/6-2024 Wang A new vision for male contraception research and development.pdf",
               },
 
             ].map((card) => (

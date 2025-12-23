@@ -11,7 +11,9 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   const handleLanguageChange = (langCode: string) => {
-    window.location.reload();
+    if (location.pathname === '/home') {
+      window.location.reload();
+    }
     i18n.changeLanguage(langCode);
     localStorage.setItem('language', langCode);
   };

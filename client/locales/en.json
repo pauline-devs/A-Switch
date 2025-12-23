@@ -166,14 +166,14 @@
     "toggleMenu": "Toggle mobile menu"
   },
   "gate": {
-  "thorem": "THOREME-CORE",
+  "thorem": "THOREME-INVEST",
   "title": "Andro-Switch",
   "description1": "The world's first male thermal contraception medical device",
   "description2": "Join the revolution!",
-  "inputPlaceholder": "Access code",
+  "inputPlaceholder": "Password",
   "submitButton": "ENTER THE FUTURE",
   "verifying": "Verifying...",
-  "accessNote": "Access reserved for initiates",
+  "accessNote": "Premium Invest Access",
   "errorIncorrect": "Incorrect access code"
 },
 "hud": {
