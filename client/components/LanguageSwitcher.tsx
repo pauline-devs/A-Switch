@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -10,9 +11,20 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   const handleLanguageChange = (langCode: string) => {
+    window.location.reload();
     i18n.changeLanguage(langCode);
     localStorage.setItem('language', langCode);
   };
+
+  // Reset page state when language changes for smooth transitions
+  useEffect(() => {
+    // Scroll to top for clean page reload
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Trigger a custom event to notify all components about language change
+    const event = new CustomEvent('languageChanged', { detail: { language: i18n.language } });
+    window.dispatchEvent(event);
+  }, [i18n.language]);
 
   return (
     <div className="flex gap-2 items-center">

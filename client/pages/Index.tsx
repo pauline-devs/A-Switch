@@ -316,7 +316,7 @@ const InvestorTool = () => {
 
 
 export default function Index() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCarouselHovered, setIsCarouselHovered] = useState(false);
@@ -461,6 +461,7 @@ export default function Index() {
       <section id="innovation" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+            key={`innovation-${i18n.language}`}
             className="text-center mb-12"
             variants={containerVariants}
             initial="hidden"
@@ -468,6 +469,7 @@ export default function Index() {
             viewport={{ once: true, amount: 0.5 }}
           >
             <motion.p
+              key={`innovationSubtitle-${i18n.language}`}
               className="text-blue-600 font-bold text-sm uppercase tracking-wider mb-2"
               variants={itemVariants}
             >
@@ -585,7 +587,8 @@ export default function Index() {
                 <motion.h3
                   className="font-semibold text-gray-900"
                   variants={itemVariants}
-                ><TextReveal>{t("innovationFeatures.title3")}</TextReveal></motion.h3>
+                >
+                  <TextReveal>{t("innovationFeatures.title3")}</TextReveal></motion.h3>
               </div>
               <motion.p
                 className="text-gray-600 text-sm"
@@ -609,7 +612,7 @@ export default function Index() {
             viewport={{ once: true, amount: 0.5 }}
           >
             <motion.h2
-              className="font-display text-4xl sm:text-5xl font-bold mb-4"
+              className="font-display text-4xl sm:text-5xl font-bold mb-4 overflow-visible whitespace-normal"
               variants={itemVariants}
             >
               <TextReveal>{t("autotest.title1")}</TextReveal>
@@ -1191,6 +1194,7 @@ export default function Index() {
       <section id="trust" className="py-20 bg-gray-950 text-white rounded-br-[60px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h3
+            key={`trust-subtitle-${i18n.language}`}
             className="text-blue-400 font-bold text-sm uppercase tracking-wider mb-2"
             variants={itemVariants}
           >
