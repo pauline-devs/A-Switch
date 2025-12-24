@@ -10,20 +10,14 @@ const languages = [
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
-  // const handleLanguageChange = (langCode: string) => {
-  //   if (location.pathname === '/home') {
-  //     window.location.reload();
-  //   }
-  //   i18n.changeLanguage(langCode);
-  //   localStorage.setItem('language', langCode);
-  // };
-
   const handleLanguageChange = (langCode: string) => {
-  // Reload current path safely
-  window.location.href = window.location.pathname; // SPA redirect handles it
-  i18n.changeLanguage(langCode);
-  localStorage.setItem('language', langCode);
-};
+    // if (location.pathname === '/home') {
+    //   window.location.reload();
+    // }
+    window.location.href = window.location.pathname;;
+    i18n.changeLanguage(langCode);
+    localStorage.setItem('language', langCode);
+  };
 
   // Reset page state when language changes for smooth transitions
   useEffect(() => {
