@@ -14,7 +14,9 @@ export function LanguageSwitcher() {
     // if (location.pathname === '/home') {
     //   window.location.reload();
     // }
-    window.location.href = window.location.pathname;;
+    if (location.pathname === '/home') {
+      window.location.href = window.location.pathname;
+    }
     i18n.changeLanguage(langCode);
     localStorage.setItem('language', langCode);
   };
